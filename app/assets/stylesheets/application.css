@@ -30,18 +30,22 @@ body {
     background-color: white;
 }
 
-header {
+header#barre-navigation {
     position: fixed;
     width: 100%;
     top: 0;
     height: 50px;
+    padding: 5px;
     
     color: white;
     background-color: black;
+
+    z-index: 1;
 }
 
 h2#titre-header {
     float: left;
+    background-color: black;
 }
 
 #connexion, #inscription {
