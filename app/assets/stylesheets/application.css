@@ -13,3 +13,44 @@
  *= require_tree .
  *= require_self
  */
+
+@font-face {  
+    font-family: 'titre';  
+    src: url('/assets/OratorStd.ttf'); 
+}
+
+@font-face {  
+    font-family: 'orator';  
+    src: url('/assets/OratorStd.ttf'); 
+}
+
+body {
+    margin: 0px;
+    margin-top: 50px;
+    background-color: white;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 50px;
+    
+    color: white;
+    background-color: black;
+}
+
+h2#titre-header {
+    float: left;
+}
+
+#connexion, #inscription {
+    float: right;
+}
+
+#connexion a, #inscription a {
+    margin-top: 10px;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}

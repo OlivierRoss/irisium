@@ -1,0 +1,272 @@
+#titre {
+    font-family: 'titre';  
+}
+
+#header {
+    position: relative;
+}
+
+#image_header {
+    position: relative;
+    width: 100%;
+}
+
+#intercalaire {
+    margin-top: -3px;
+    background-color: black;
+    color: white;
+    height: 150px;
+    font-family: 'orator';
+}
+
+#images {
+    position: relative;
+    height: 200px;
+}
+
+#a_propos, #inscriptions {
+    position: relative;
+    background-color: white;
+    color: black;
+    height: 550px;
+}
+
+#contact {
+    position: relative;
+    background-color: black;
+    color: white;
+    height: 400px;
+}
+
+#ancres {
+    position: absolute;
+    top: 1%;
+    left: 26%;
+
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+#titre {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 135px;
+
+    text-align: center;
+    font-size: 90px;
+    font-weigth: bold;
+    text-transform: uppercase;
+}
+
+#sous-titre {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 245px;
+
+    text-align: center;
+    font-size: 30px;
+}
+
+#ligne_gauche_soustitre {
+    position: absolute;
+    top: 260px;
+    left: 330px;
+
+    width: 50px;
+    height: 3px;
+
+    background-color:black;
+}
+
+#ligne_droite_soustitre {
+    position: absolute;
+    top: 260px;
+    right: 335px;
+
+    width: 50px;
+    height: 3px;
+
+    background-color:black;
+}
+
+#slogan {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 66%;
+
+    text-align: center;
+    font-size: 15px;
+    font-family: 'orator';
+}
+
+#element_graphique {
+    position: absolute;
+    top: 77%;
+    left: 51%; 
+    width: 10px;
+}
+
+#placement_accroche {
+    height: 47%;
+}
+
+#accroche {
+    margin: 0 auto;
+
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+ #filets {
+    position: absolute;
+    top: 50px;
+    left: 45%;
+    width: 120px;
+ }
+
+#placement_qui_sommes_nous {
+    height: 120px;
+}
+
+#qui_sommes_nous {
+    margin: 0 auto;
+
+    text-align: center;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-family: 'orator';
+}
+
+#images {
+    position: relative;
+ }
+
+#activites {
+    position: absolute;
+    top: 240px;
+    left: 285px;
+    width: 100px;
+    font-size: 14px;
+}
+
+#description {
+    position: absolute;
+    top: 240px;
+    left: 435px;
+    width: 280px;
+    font-size: 11px;
+    line-height: 17px;
+}
+
+.caroussel {
+    position: absolute;
+    top: -25px;
+    height: 200px;
+}
+
+#caroussel1 {
+    left: 150px;
+}
+
+#caroussel2 {
+    left: 300px;
+}
+
+#caroussel3 {
+    left: 450px;
+}
+
+#caroussel4 {
+    left: 600px;
+}
+
+#caroussel5 {
+    left: 750px;
+}
+
+#background-images {
+    height: 150px;
+    width: 100%;
+    background-color: black;
+}
+
+#placement_inscriptions {
+    height: 120px;
+}
+
+#titre_inscriptions {
+    margin: 0 auto;
+
+    text-align: center;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-family: 'orator';
+}
+
+#placement_contact {
+    height: 120px;
+}
+
+#titre_contact {
+    margin: 0 auto;
+
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: 'orator';
+}
+
+#emplacement {
+    position: absolute;
+    left: 200px;
+    width: 200px; 
+}
+
+#reseaux {
+    position: absolute;
+    left: 400px;
+    right: 400px; 
+}
+
+#responsable {
+    position: absolute;
+    right: 200px;
+    width: 200px; 
+}
+
+.titre-section {
+    margin-top: 60px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.section {
+    font-size: 10px;
+    font-style: normal;
+    line-height: 15px;
+    text-transform: uppercase;
+}
+
+#facebook {
+    position: absolute;
+    bottom: 25px;
+    left: 46%;
+    height: 20px;
+}
+
+#instagram {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    height: 20px;
+}
+
+#twitter {
+    position: absolute;
+    bottom: 25px;
+    left: 54%;
+    height: 20px;
+}

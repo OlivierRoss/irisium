@@ -1,0 +1,36 @@
+<div class="formulaire">
+    <p id="notice"><%= notice %></p>
+
+    <p>
+    <strong>Prenom:</strong>
+    <%= @user.prenom %>
+    </p>
+
+    <p>
+    <strong>Nom:</strong>
+    <%= @user.nom %>
+    </p>
+
+    <p>
+    <strong>Age:</strong>
+    <%= @user.age %>
+    </p>
+
+    <p>
+    <strong>Courriel:</strong>
+    <%= @user.courriel %>
+    </p>
+
+    <p>
+    <strong>Motdepasse:</strong>
+    <%= @user.motdepasse %>
+    </p>
+
+    <p>
+    <strong>Salt:</strong>
+    <%= @user.salt %>
+    </p>
+
+    <%= link_to 'Edit', edit_user_path(@user) %> |
+    <%= link_to 'Back', users_path %>
+</div>
