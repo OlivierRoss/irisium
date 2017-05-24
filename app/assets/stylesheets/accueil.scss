@@ -40,11 +40,15 @@
 
 #ancres {
     position: absolute;
-    top: 1%;
+    top: 7%;
     left: 26%;
 
     font-size: 9px;
     text-transform: uppercase;
+}
+
+#ancres a {
+    text-decoration: none;
 }
 
 #titre {
@@ -146,17 +150,17 @@
 
 #activites {
     position: absolute;
-    top: 240px;
-    left: 285px;
-    width: 100px;
+    top: 40%;
+    left: 30%;
+    width: 9%;
     font-size: 14px;
 }
 
 #description {
     position: absolute;
-    top: 240px;
-    left: 435px;
-    width: 280px;
+    top: 40%;
+    left: 40%;
+    width: 35%;
     font-size: 11px;
     line-height: 17px;
 }
