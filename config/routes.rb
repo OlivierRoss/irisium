@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :evenements
+  devise_for :users
   root 'accueil#index'
 
   get 'accueil/index'
