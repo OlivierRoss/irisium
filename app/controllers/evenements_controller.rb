@@ -1,4 +1,5 @@
 class EvenementsController < ApplicationController
+    before_action :authenticate_user!, only: [:edit, :new, :create, :destroy]
     before_action :set_evenement, only: [:show, :edit, :update, :destroy]
 
     # GET /evenements
