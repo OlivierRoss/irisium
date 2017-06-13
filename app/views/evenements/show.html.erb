@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<div id="contenu-evenement">
+    <div id="titre">
+        <strong><%= @evenement.nom %></strong>
+    </div>
+
+    <p>
+    <strong>Description:</strong>
+    <%= @evenement.description %>
+    </p>
+
+    <p>
+    <strong>Image:</strong>
+    <%= image_tag image_show_path(@image) %>
+    </p>
+
+    <p>
+    <strong>Date:</strong>
+    <%= @evenement.date %>
+    </p>
+
+    <p>
+    <strong>Lieu:</strong>
+    <%= @evenement.lieu %>
+    </p>
+
+    <%= link_to 'Edit', edit_evenement_path(@evenement) %> |
+    <%= link_to 'Back', evenements_path %>
+</div>
