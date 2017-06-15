@@ -1,33 +1,29 @@
 <h1>Evenements</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nom</th>
-      <th>Description</th>
-      <th>Image</th>
-      <th>Date</th>
-      <th>Lieu</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<h2><%= t :a_venir %></h2>
 
-  <tbody>
-    <% @evenements.each do |evenement| %>
-      <tr>
-        <td><%= evenement.nom %></td>
-        <td><%= evenement.description %></td>
-        <td><%# evenement.image %></td>
-        <td><%= evenement.date %></td>
-        <td><%= evenement.lieu %></td>
-        <td><%= link_to 'Show', evenement %></td>
-        <td><%= link_to 'Edit', edit_evenement_path(evenement) %></td>
-        <td><%= link_to 'Destroy', evenement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @evenements.where("date >= ?", Date.today).each do |evenement| %>
+    <p><%= evenement.nom %></p>
+    <p><%= evenement.description %></p>
+    <p><%= image_tag image_show_tag(evenement.image_id) %></p>
+    <p><%= evenement.date %></p>
+    <p><%= evenement.lieu %></p>
+    <p><%= link_to 'Show', evenement %></p>
+    <p><%= link_to 'Edit', edit_evenement_path(evenement) %></p>
+    <p><%= link_to 'Destroy', evenement, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+<% end %>
 
-<br>
+<h2>Passés</h2>
+
+<% @evenements.where("date < ?", Date.today).each do |evenement| %>
+    <p><%= evenement.nom %></p>
+    <p><%= evenement.description %></p>
+    <p><%= image_tag image_show_path(evenement.image_id) %></p>
+    <p><%= evenement.date %></p>
+    <p><%= evenement.lieu %></p>
+    <p><%= link_to 'Show', evenement %></p>
+    <p><%= link_to 'Edit', edit_evenement_path(evenement) %></p>
+    <p><%= link_to 'Destroy', evenement, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+<% end %>
 
 <%= link_to 'New Evenement', new_evenement_path %>
