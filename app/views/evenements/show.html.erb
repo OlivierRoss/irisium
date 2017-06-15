@@ -1,30 +1,29 @@
-<p id="notice"><%= notice %></p>
-
 <div id="contenu-evenement">
-    <div id="titre">
-        <strong><%= @evenement.nom %></strong>
+    <div id="informations-evenement">
+        <div id="titre-evenement" class="titre">
+            <strong><%= @evenement.nom %></strong>
+        </div>
+        <div id="date-evenement">
+            <%= @evenement.date %>
+        </div>
+        <div id="description-evenement">
+            <%= @evenement.description %>
+        </div>
+        <div id="lieu-evenement">
+            <%= @evenement.lieu %>
+        </div>
+    </div>
+    <div id="imagerie-evenement">
+        <div id="image-evenement">
+            <%= image_tag image_show_path(@image) %>
+        </div>
+        <div id="carte-evenement">
+            Google Maps
+        </div>
     </div>
 
-    <p>
-    <strong>Description:</strong>
-    <%= @evenement.description %>
-    </p>
-
-    <p>
-    <strong>Image:</strong>
-    <%= image_tag image_show_path(@image) %>
-    </p>
-
-    <p>
-    <strong>Date:</strong>
-    <%= @evenement.date %>
-    </p>
-
-    <p>
-    <strong>Lieu:</strong>
-    <%= @evenement.lieu %>
-    </p>
-
-    <%= link_to 'Edit', edit_evenement_path(@evenement) %> |
-    <%= link_to 'Back', evenements_path %>
+    <footer>
+        <%= link_to 'Edit', edit_evenement_path(@evenement) %> |
+        <%= link_to 'Back', evenements_path %>
+    <footer>
 </div>

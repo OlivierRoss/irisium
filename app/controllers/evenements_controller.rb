@@ -11,7 +11,7 @@ class EvenementsController < ApplicationController
     # GET /evenements/1
     # GET /evenements/1.json
     def show
-        @image = Image.first
+        @image = Image.find(@evenement.image_id)
     end
 
     # GET /evenements/new
@@ -32,9 +32,8 @@ class EvenementsController < ApplicationController
         image = Image.new({:data => image_web.tempfile.read, :mime_type => image_web.content_type, :name => image_web.original_filename})
         image.save
 
-        evenement_params[:image_id] = image.id
-
         @evenement = Evenement.new(evenement_params.except(:image))
+        @evenement.image_id = image.id
 
         respond_to do |format|
             if @evenement.save

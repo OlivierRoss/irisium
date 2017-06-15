@@ -1,21 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Irisium</title>
-    <%= csrf_meta_tags %>
+    <head>
+        <title>Irisium</title>
+        <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
 
-  <body>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <header id="barre-navigation">
-          <h2 id="titre-header"><a href="<%= root_path %>">Irisium</a></h2>
-          <span id="connexion"><a href="#">Connexion</a></span> 
-          <span id="inscription"><a href="<%= new_user_path %>">Inscription</a></span> 
-      </header>
-    <%= yield %>
-  </body>
+    <body>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <header id="barre-navigation">
+            <h2 id="titre-header"><a href="<%= root_path %>"><%= image_tag "/assets/logo_irisium.png" %></a></h2>
+            <nav id="navigation">
+                <ul>
+                    <li class="menu"><a href="<%= user_session_path %>">Connexion</a></li> 
+                    <li class="menu"><a href="<%= new_user_path %>">Inscription</a></li> 
+                    <li class="menu"><a href="<%= evenements_path %>">Évenements</a></li> 
+                    <li class="menu"><a href="<%= accueil_offre_path %>">Offre</a></li> 
+                </ul>
+            </nav>
+        </header>
+
+        <section id="contenu-principal">
+            <%= yield %>
+        </section>
+
+        <footer id="contact">
+            <div id="placement_contact"></div>
+            <div id="titre_contact">Contacts</div>
+            <div id="emplacement">
+                <p class="titre-section">Adresse</p>
+                <p class="section">165, RUE WELLINGTON NORD<br>SHERBROOKE (QUEBEC) J1H 5B9</p>
+            </div>
+            <div id="reseaux">
+                <p class="titre-section">Suivez-nous</p>
+                <p class="section">Abonnez-vous &agrave; notre <br>infolettre</p>
+            </div>
+            <div id="responsable">
+                <p class="titre-section">Responsable</p>
+                <p class="section">Camille Girard<br>819 452-2226<br>camillegirard@studioirisium.com</p>
+            </div>
+            <img src="/assets/logo_facebook.png" id="facebook" alt="facebook">
+            <img src="/assets/logo_instagram.png" id="instagram" alt="instagram">
+            <img src="/assets/logo_twitter.png" id="twitter" alt="twitter">
+        </footer>
+    </body>
 </html>

@@ -1,15 +1,31 @@
-// Place all the styles related to the evenements controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$hauteur-contenu: 500px;
 
 #contenu-evenement {
     padding: 10px;
 }
 
+#informations-evenement {
+    position: relative;
+    float: left;
 
-#titre {
-    padding-left: 100px;
-    padding-top: 200px;
+    width: 50%;
+    height: $hauteur-contenu;
+}
+
+#imagerie-evenement {
+    position: relative;
+    float: right;
+
+    width: 50%;
+    height: $hauteur-contenu;
+}
+
+#image-evenement {
     width: 100%;
-    height: 600px;
+    height: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
 }

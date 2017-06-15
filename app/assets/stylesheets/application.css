@@ -26,35 +26,68 @@
 
 body {
     margin: 0px;
-    margin-top: 75px;
-    background-color: white;
+    margin-top: 60px;
+    background-color: #A9A9A9;
+}
+
+#contenu-principal {
+    width: 100%;
+    min-height: 400px;
 }
 
 header#barre-navigation {
     position: fixed;
     width: 100%;
     top: 0;
-    height: 50px;
-    padding: 5px;
+    height: 60px;
     
     color: white;
-    background-color: black;
+    background: linear-gradient(white, #A9A9A9);
 
     z-index: 1;
 }
 
-h2#titre-header {
-    float: left;
-    background-color: black;
+#titre-header {
+    margin: 10px;
 }
 
-#connexion, #inscription {
+#titre-header img {
+    height: 40px;
+    margin-left: 7%;
+    float: left;
+}
+
+.menu {
     float: right;
 }
 
-#connexion a, #inscription a {
+.menu a {
     margin-top: 10px;
     padding: 15px;
     color: white;
     text-decoration: none;
+}
+
+#navigation {
+    margin-right: 3%;
+    float: right;
+}
+
+#navigation ul {
+    list-style-type: none;
+}
+
+#navigation ul li {
+    display: inline-block;
+    color: black;
+    border-left: 1px solid black;
+}
+
+#navigation ul li:last-child {
+    border: none;
+}
+
+footer {
+    width: 100%;
+    clear: both;
 }

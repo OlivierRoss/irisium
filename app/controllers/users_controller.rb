@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+      redirect_to root_path if @user.id != params[:id].to_i
   end
 
   # GET /users/new
@@ -19,6 +20,8 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+      # Attention aux autres utilisateurs
+      redirect_to root_path if @user.id != params[:id].to_i
   end
 
   # POST /users

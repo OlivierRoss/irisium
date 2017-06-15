@@ -1,5 +1,6 @@
-#titre {
+.titre {
     font-family: 'titre';  
+    text-align: center;
 }
 
 #header {
@@ -51,13 +52,12 @@
     text-decoration: none;
 }
 
-#titre {
+#titre-principal {
     position: absolute;
     left: 0px;
     right: 0px;
     top: 135px;
 
-    text-align: center;
     font-size: 90px;
     font-weigth: bold;
     text-transform: uppercase;
