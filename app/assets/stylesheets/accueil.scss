@@ -1,3 +1,5 @@
+@import "font-awesome";
+
 .titre {
     font-family: 'titre';  
     text-align: center;
@@ -254,23 +256,16 @@
     text-transform: uppercase;
 }
 
-#facebook {
-    position: absolute;
-    bottom: 25px;
-    left: 46%;
-    height: 20px;
+.offre {
+    width: 33.3%;
+    float: left;
 }
 
-#instagram {
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
-    height: 20px;
+#mission {
+    margin-top: 90px;
 }
 
-#twitter {
-    position: absolute;
-    bottom: 25px;
-    left: 54%;
-    height: 20px;
+.contenu-offre {
+    padding: 20px;
+    text-align: center;
 }

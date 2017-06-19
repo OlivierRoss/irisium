@@ -1,29 +1,39 @@
-<h1>Evenements</h1>
+<h2 class="titre"><%= t :a_venir %></h2>
 
-<h2><%= t :a_venir %></h2>
+<section class="division-evenementielle">
+    <% @evenements.where("date >= ?", Date.today).each do |evenement| %>
+        <article class="evenement">
+            <div class="informations-evenement">
+                <h3 id="nom-evenement"><%= evenement.nom %></h3>
+                <p><%= evenement.description %></p>
+                <p><%= evenement.date %></p>
+                <p><%= evenement.lieu %></p>
+            </div>
+            <div class="image-evenement"><%= image_tag image_show_path(evenement.image_id) %></div>
+            <p><%= link_to 'Show', evenement %></p>
+            <p><%= link_to 'Edit', edit_evenement_path(evenement) %></p>
+            <p><%= link_to 'Destroy', evenement, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        </article>
+    <% end %>
+</section>
 
-<% @evenements.where("date >= ?", Date.today).each do |evenement| %>
-    <p><%= evenement.nom %></p>
-    <p><%= evenement.description %></p>
-    <p><%= image_tag image_show_tag(evenement.image_id) %></p>
-    <p><%= evenement.date %></p>
-    <p><%= evenement.lieu %></p>
-    <p><%= link_to 'Show', evenement %></p>
-    <p><%= link_to 'Edit', edit_evenement_path(evenement) %></p>
-    <p><%= link_to 'Destroy', evenement, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-<% end %>
+<h2 class="titre">Passés</h2>
 
-<h2>Passés</h2>
+<section class="division-evenementielle">
+    <% @evenements.where("date < ?", Date.today).each do |evenement| %>
+        <article class="evenement">
+            <div class="informations-evenement">
+                <h3 id="nom-evenement"><%= evenement.nom %></h3>
+                <p><%= evenement.description %></p>
+                <p><%= evenement.date %></p>
+                <p><%= evenement.lieu %></p>
+            </div>
+            <div class="image-evenement"><%= image_tag image_show_path(evenement.image_id) %></div>
+            <p><%= link_to 'Show', evenement %></p>
+            <p><%= link_to 'Edit', edit_evenement_path(evenement) %></p>
+            <p><%= link_to 'Destroy', evenement, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        </article>
+    <% end %>
 
-<% @evenements.where("date < ?", Date.today).each do |evenement| %>
-    <p><%= evenement.nom %></p>
-    <p><%= evenement.description %></p>
-    <p><%= image_tag image_show_path(evenement.image_id) %></p>
-    <p><%= evenement.date %></p>
-    <p><%= evenement.lieu %></p>
-    <p><%= link_to 'Show', evenement %></p>
-    <p><%= link_to 'Edit', edit_evenement_path(evenement) %></p>
-    <p><%= link_to 'Destroy', evenement, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-<% end %>
-
+</section>
 <%= link_to 'New Evenement', new_evenement_path %>

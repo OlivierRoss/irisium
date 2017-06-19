@@ -1,2 +1,39 @@
-<h1>Irisium</h1>
-<p>Find me in app/views/accueil/offre.html.erb</p>
+<h2 id="mission" class="citation-majeure">Favoriser le développement des artistes sherbrookois</h2>
+<div id="offres">
+    <section id="cafe" class="offre">
+        <article class="contenu-offre">
+
+            <h2 class="titre">Café / Bar</h2>
+            <%= image_tag "bar.jpg", style: "width: 100%;" %>
+            <p>Irisium vous offre un choix ...</p>
+            <ul>
+                <li><%= fa_icon "coffee", text: "Cafés de spécialité" %></li>
+                <li><%= fa_icon "glass", text: "Kombucha " %><a href="#">Iris</a></li>
+            </ul>
+        </article>
+    </section>
+    <section id="evenements" class="offre">
+        <article class="contenu-offre">
+            <h2 class="titre">Événements</h2>
+            <%= image_tag "scene.jpeg", style: "width: 100%;" %>
+            <p>Créez chez vous les événements de vos rêves</p>
+            <ul>
+                <li><%= fa_icon "calendar", text: "Visibilité" %></li>
+                <li><%= fa_icon "music", text: "Musique" %></li>
+            </ul>
+
+        </article>
+    </section>
+    <section id="equipement" class="offre">
+        <article class="contenu-offre">
+            <h2 class="titre">Équipement</h2>
+            <%= image_tag "backdrop.png", style: "width: 100%;" %>
+            <p>Trouvez tout le matériel dont vous avez besoin sur place</p>
+            <ul>
+                <li><%= fa_icon "camera", text: "Photographie" %></li>
+                <li><%= fa_icon "paint-brush", text: "Peinture" %></li>
+            </ul>
+
+        </article>
+    </section>
+</div>

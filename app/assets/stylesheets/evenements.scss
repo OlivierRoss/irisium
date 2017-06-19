@@ -29,3 +29,35 @@ $hauteur-contenu: 500px;
         height: 100%;
     }
 }
+
+.informations-evenement {
+    position: relative;
+    float: left;
+    width: 50%;
+}
+
+.informations-evenement::nth-of-type(2n) {
+    float: right;
+}
+
+.image-evenement {
+    position: relative;
+    float: right;
+    width: 50%;
+    height: 100%;
+
+    img {
+        margin: auto 0;
+        width: 75%;
+        height: 100%;
+    }
+}
+
+.image-evenement::nth-child(2n) {
+    float: left;
+}
+
+.evenement {
+    padding: 30px;
+    height: 250px;
+}

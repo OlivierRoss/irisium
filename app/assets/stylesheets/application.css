@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
+ *
  */
 
 @font-face {  
@@ -73,11 +75,11 @@ header#barre-navigation {
     float: right;
 }
 
-#navigation ul {
+ul {
     list-style-type: none;
 }
 
-#navigation ul li {
+#navigation li {
     display: inline-block;
     color: black;
     border-left: 1px solid black;
@@ -91,3 +93,46 @@ footer {
     width: 100%;
     clear: both;
 }
+
+h1 {
+    text-align: center;
+
+
+}
+
+.citation-majeure::before {
+    content: "« ";
+}
+
+.citation-majeure::after {
+    content: " »";
+}
+
+.citation-majeure {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: normal;
+    font-style: italic;
+}
+
+#facebook {
+    position: absolute;
+    bottom: 25px;
+    left: 46%;
+    height: 20px;
+}
+
+#instagram {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    height: 20px;
+}
+
+#twitter {
+    position: absolute;
+    bottom: 25px;
+    left: 54%;
+    height: 20px;
+}
+

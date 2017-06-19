@@ -5,8 +5,7 @@ class ApplicationController < ActionController::Base
 private
 
     def set_locale
-        debugger
-        I18n.locale = params[:locale] || I18n.default_locale
+        I18n.locale = params[:locale] || :fr #I18n.default_locale
     end
 
 end
