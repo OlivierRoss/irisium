@@ -1,2 +1,7 @@
 fr:
-  a_venir: "À venir"
+    date:
+        order:
+            - "day"
+            - "month"
+            - "year"
+    a_venir: "À venir"

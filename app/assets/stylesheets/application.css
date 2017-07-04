@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  *= require font-awesome
+ *= require purecss
  *
  */
 
@@ -22,82 +23,39 @@
 }
 
 @font-face {  
-    font-family: 'orator';  
-    src: url('/assets/OratorStd.ttf'); 
+    font-family: 'montserrat';  
+    src: url('/assets/Montserrat-Regular.otf'); 
 }
 
 body {
     margin: 0px;
     margin-top: 60px;
-    background-color: #A9A9A9;
+    background-color: white;
+}
+
+.pure-g {
+    letter-spacing: initial !important;
+}
+
+#footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+}
+
+.social-media {
+    width: 20px;
+}
+
+.titre-section-footer {
+    font-family: 'montserrat';
+    text-transform: uppercase;
 }
 
 #contenu-principal {
     width: 100%;
     min-height: 400px;
-}
-
-header#barre-navigation {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    height: 60px;
-    
-    color: white;
-    background: linear-gradient(white, #A9A9A9);
-
-    z-index: 1;
-}
-
-#titre-header {
-    margin: 10px;
-}
-
-#titre-header img {
-    height: 40px;
-    margin-left: 7%;
-    float: left;
-}
-
-.menu {
-    float: right;
-}
-
-.menu a {
-    margin-top: 10px;
-    padding: 15px;
-    color: white;
-    text-decoration: none;
-}
-
-#navigation {
-    margin-right: 3%;
-    float: right;
-}
-
-ul {
-    list-style-type: none;
-}
-
-#navigation li {
-    display: inline-block;
-    color: black;
-    border-left: 1px solid black;
-}
-
-#navigation ul li:last-child {
-    border: none;
-}
-
-footer {
-    width: 100%;
-    clear: both;
-}
-
-h1 {
-    text-align: center;
-
-
 }
 
 .citation-majeure::before {
@@ -113,26 +71,5 @@ h1 {
     font-size: 1.3em;
     font-weight: normal;
     font-style: italic;
-}
-
-#facebook {
-    position: absolute;
-    bottom: 25px;
-    left: 46%;
-    height: 20px;
-}
-
-#instagram {
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
-    height: 20px;
-}
-
-#twitter {
-    position: absolute;
-    bottom: 25px;
-    left: 54%;
-    height: 20px;
 }
 

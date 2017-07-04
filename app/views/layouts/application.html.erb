@@ -6,45 +6,59 @@
 
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+            <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+        <!--<![endif]-->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <body>
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-        <header id="barre-navigation">
-            <h2 id="titre-header"><a href="<%= root_path %>"><%= image_tag "/assets/logo_irisium.png" %></a></h2>
-            <nav id="navigation">
-                <ul>
-                    <li class="menu"><a href="<%= user_session_path %>">Connexion</a></li> 
-                    <li class="menu"><a href="<%= new_user_path %>">Inscription</a></li> 
-                    <li class="menu"><a href="<%= evenements_path %>">Évenements</a></li> 
-                    <li class="menu"><a href="<%= accueil_offre_path %>">Offre</a></li> 
-                </ul>
-            </nav>
-        </header>
+        <p class="notice"><%= notice %></p><p class="alert"><%= alert %></p>
+        <div class="pure-menu pure-menu-horizontal">
+            <a href="<%= root_path %>" class="pure-menu-heading pure-menu-link" style="text-transform: uppercase;">Irisium</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="<%= new_user_path %>" class="pure-menu-link"><%= fa_icon "instagram", class: "fa-lg" %></a></li> 
+                <li class="pure-menu-item"><a href="<%= new_user_path %>" class="pure-menu-link"><%= fa_icon "twitter", class: "fa-lg" %></a></li> 
+                <li class="pure-menu-item"><a href="<%= new_user_path %>" class="pure-menu-link"><%= fa_icon "facebook", class: "fa-lg" %></a></li> 
+
+                <li class="pure-menu-item"><a href="<%= new_user_path %>" class="pure-menu-link">Inscription</a></li> 
+                <li class="pure-menu-item"><a href="<%= accueil_offre_path %>" class="pure-menu-link">Contact</a></li> 
+                <li class="pure-menu-item"><a href="<%= accueil_offre_path %>" class="pure-menu-link">FAQ</a></li> 
+                <li class="pure-menu-item"><a href="<%= evenements_path %>" class="pure-menu-link">Évenements</a></li> 
+                <li class="pure-menu-item"><a href="<%= evenements_path %>" class="pure-menu-link">À propos</a></li> 
+            </ul>
+        </div>
 
         <section id="contenu-principal">
             <%= yield %>
         </section>
 
-        <footer id="contact">
-            <div id="placement_contact"></div>
-            <div id="titre_contact">Contacts</div>
-            <div id="emplacement">
-                <p class="titre-section">Adresse</p>
-                <p class="section">165, RUE WELLINGTON NORD<br>SHERBROOKE (QUEBEC) J1H 5B9</p>
+        <footer id="footer" class="pure-g">
+            <div id="informations" class="pure-u-1 pure-u-md-2-5"> 
+                <h2 class="titre-section-footer">Irisium</h2>
+                <p id="vision">La vision Irisium</p>
             </div>
-            <div id="reseaux">
-                <p class="titre-section">Suivez-nous</p>
-                <p class="section">Abonnez-vous &agrave; notre <br>infolettre</p>
+            <div id="geo" class="pure-u-1 pure-u-md-1-5"> 
+                <p><address>173 rue Wellington N.</address></p>
+                <h2 class="titre-section-footer">Informations</h2>
             </div>
-            <div id="responsable">
-                <p class="titre-section">Responsable</p>
-                <p class="section">Camille Girard<br>819 452-2226<br>camillegirard@studioirisium.com</p>
+            <div id="heures_ouverture" class="pure-u-1 pure-u-md-1-5"> 
+                <p>Heures d'ouverture</p>
+                <h2 class="titre-section-footer">Heures d'ouverture</h2>
             </div>
-            <img src="/assets/logo_facebook.png" id="facebook" alt="facebook">
-            <img src="/assets/logo_instagram.png" id="instagram" alt="instagram">
-            <img src="/assets/logo_twitter.png" id="twitter" alt="twitter">
+            <div id="reseaux" class="pure-u-1 pure-u-md-1-5">
+                <p>
+                    <a href="<%= new_user_path %>"><%= fa_icon "instagram", class: "fa-lg" %></a>
+                    <a href="<%= new_user_path %>"><%= fa_icon "twitter", class: "fa-lg" %></a>
+                    <a href="<%= new_user_path %>"><%= fa_icon "facebook", class: "fa-lg" %></a>
+                </p>
+                <h2 class="titre-section-footer">Suivez-nous</h2>
+            </div>
         </footer>
     </body>
 </html>

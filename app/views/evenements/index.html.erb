@@ -9,10 +9,13 @@
                 <p><%= evenement.date %></p>
                 <p><%= evenement.lieu %></p>
             </div>
-            <div class="image-evenement"><%= image_tag image_show_path(evenement.image_id) %></div>
-            <p><%= link_to 'Show', evenement %></p>
-            <p><%= link_to 'Edit', edit_evenement_path(evenement) %></p>
-            <p><%= link_to 'Destroy', evenement, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            <div class="image-evenement"><%= link_to(image_tag(image_show_path evenement.image_id), evenement) %></div>
+            <% if @user.niveau_admin > 0 %>
+                <div class="administration-evenement">
+                    <%= link_to 'Edit', edit_evenement_path(evenement) %>
+                    <%= link_to 'Destroy', evenement, method: :delete, data: { confirm: 'Are you sure?' } %>
+                </div>
+            <% end %>
         </article>
     <% end %>
 </section>
@@ -28,10 +31,13 @@
                 <p><%= evenement.date %></p>
                 <p><%= evenement.lieu %></p>
             </div>
-            <div class="image-evenement"><%= image_tag image_show_path(evenement.image_id) %></div>
-            <p><%= link_to 'Show', evenement %></p>
-            <p><%= link_to 'Edit', edit_evenement_path(evenement) %></p>
-            <p><%= link_to 'Destroy', evenement, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            <div class="image-evenement"><%= link_to(image_tag(image_show_path evenement.image_id), evenement) %></div>
+            <div class="administration-evenement">
+            <% if @user.niveau_admin > 0 %>
+                <%= link_to 'Edit', edit_evenement_path(evenement) %>
+                <%= link_to 'Destroy', evenement, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+            </div>
         </article>
     <% end %>
 
