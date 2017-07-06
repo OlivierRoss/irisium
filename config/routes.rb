@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'accueil/offre'
+  get 'accueil/contact'
+  get 'accueil/faq'
+  get 'accueil/a_propos'
 
   devise_for :users
   root 'accueil#index'

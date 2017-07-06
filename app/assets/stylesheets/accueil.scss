@@ -1,4 +1,50 @@
 #creativite {
-    background-color:white;
+    text-align: center;
+    h3 {
+        text-transform: uppercase;
+    }
     height: 300px;
+}
+
+#description-irisium {
+    text-align: center;
+    padding: 20px;
+    h3 {
+        text-transform: uppercase;
+    }
+}
+
+#mission {
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+    padding: 20px;
+
+    .titre-section {
+        margin: 10px;
+        
+        span {
+            text-transform: uppercase;
+            padding: 5px 10px;
+            border: 2px solid rgb(200, 200, 200);
+        }
+    }
+}
+
+#inscrivez-vous-maintenant {
+    text-align: center;
+    padding: 20px;
+    h3 {
+        text-transform: uppercase;
+    }
+}
+
+#evenements-futurs {
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+    p {
+        margin: 20px;
+        text-align: right;
+    }
 }

@@ -4,7 +4,15 @@ class AccueilController < ApplicationController
 
     end
 
-    def offre
+    def faq
+
+    end
+
+    def a_propos
+
+    end
+
+    def contact
 
     end
 
