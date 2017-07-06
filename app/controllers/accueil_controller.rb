@@ -1,7 +1,7 @@
 class AccueilController < ApplicationController
 
     def index
-
+        @image_evenement = Image.find(Evenement.last.image_id)
     end
 
     def faq

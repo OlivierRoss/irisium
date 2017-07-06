@@ -1,38 +1,45 @@
+$hauteur-creativite: 300px;
+$padding-section: 20px;
+$background-gris: rgb(245, 245, 245);
+
 #creativite {
     text-align: center;
     h3 {
         text-transform: uppercase;
+        vertical-align: middle;
+        line-height: $hauteur-creativite;
     }
-    height: 300px;
+    height: $hauteur-creativite;
+    background-image: url("/assets/bar.jpg");
 }
 
 #description-irisium {
     text-align: center;
-    padding: 20px;
+    padding: $padding-section;
     h3 {
         text-transform: uppercase;
     }
 }
 
 #mission {
-    background-color: rgb(245, 245, 245);
+    background-color: $background-gris;
     text-align: center;
-    padding: 20px;
+    padding: $padding-section;
 
     .titre-section {
-        margin: 10px;
+        margin: 20px;
         
         span {
             text-transform: uppercase;
-            padding: 5px 10px;
+            padding: 5px 30px;
             border: 2px solid rgb(200, 200, 200);
         }
     }
 }
 
-#inscrivez-vous-maintenant {
+#inscrivez-vous-maintenant , #autres-questions{
     text-align: center;
-    padding: 20px;
+    padding: $padding-section;
     h3 {
         text-transform: uppercase;
     }
@@ -42,9 +49,47 @@
     h2 {
         text-align: center;
         text-transform: uppercase;
+        vertical-align: middle;
+        line-height: $hauteur-creativite;
+        height: $hauteur-creativite;
     }
     p {
-        margin: 20px;
+        margin: $padding-section;
         text-align: right;
     }
+}
+
+/***************************/
+
+#image-entete {
+    height: $hauteur-creativite;
+    background-image: url("/assets/bar.jpg");
+}
+
+#formulaire-contact {
+    width: 85%;
+    padding: 15px 5%;
+    margin: 20px auto;
+    background-color: $background-gris;
+
+    button[type=submit] {
+        display: block;
+        margin: 20px auto;
+        margin-bottom: 10px;
+
+        border-radius: 15px;
+        width: 100px;
+    }
+}
+
+/***************************/
+
+#questions-reponses {
+    width: 85%;
+    padding: 15px 5%;
+}
+
+#autres-questions {
+    background-color: $background-gris;
+    margin-bottom: 20px;
 }

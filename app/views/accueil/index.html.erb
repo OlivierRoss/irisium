@@ -44,10 +44,10 @@
 <section id="inscrivez-vous-maintenant">
     <h3 class="leger">Inscrivez-vous dès maintenant pour en profiter le plus tôt possible</h3>
     <p><a href="<%= new_user_path %>" class="pure-button pure-button-primary">Je m'abonne</a></p>
-    <p id="details_inscription"><a href="#">En savoir plus</a></p>
+    <p id="details_inscription"><a href="<%= accueil_a_propos_path %>">En savoir plus</a></p>
 </section>
 
-<section id="evenements-futurs">
+<section id="evenements-futurs" style="background-image: url('<%= image_show_path(@image_evenement) %>'); background-size: contain; background-repeat: no-repeat;">
     <h2>Événements<br>à venir</h2>
     <p><a href="<%= evenements_path %>">Voir tous les événements</a></p>
 </section>

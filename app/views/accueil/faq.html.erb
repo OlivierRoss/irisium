@@ -1,39 +1,67 @@
-<h2 id="mission" class="citation-majeure">Favoriser le développement des artistes sherbrookois</h2>
-<div id="offres">
-    <section id="cafe" class="offre">
-        <article class="contenu-offre">
+<section id="image-entete" class="pure-u-1">
 
-            <h2 class="titre">Café / Bar</h2>
-            <%= image_tag "bar.jpg", style: "width: 100%;" %>
-            <p>Irisium vous offre un choix ...</p>
+</section>
+<section id="questions-reponses">
+    <h2>FAQ</h2>
+    <div id="accordion">
+        <h3>Section 1</h3>
+        <div>
+            <p>
+            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+            </p>
+        </div>
+        <h3>Section 2</h3>
+        <div>
+            <p>
+            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+            suscipit faucibus urna.
+            </p>
+        </div>
+        <h3>Section 3</h3>
+        <div>
+            <p>
+            Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+            Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+            ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+            lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+            </p>
             <ul>
-                <li><%= fa_icon "coffee", text: "Cafés de spécialité" %></li>
-                <li><%= fa_icon "glass", text: "Kombucha " %><a href="#">Iris</a></li>
+                <li>List item one</li>
+                <li>List item two</li>
+                <li>List item three</li>
             </ul>
-        </article>
-    </section>
-    <section id="evenements" class="offre">
-        <article class="contenu-offre">
-            <h2 class="titre">Événements</h2>
-            <%= image_tag "scene.jpeg", style: "width: 100%;" %>
-            <p>Créez chez vous les événements de vos rêves</p>
-            <ul>
-                <li><%= fa_icon "calendar", text: "Visibilité" %></li>
-                <li><%= fa_icon "music", text: "Musique" %></li>
-            </ul>
+        </div>
+        <h3>Section 4</h3>
+        <div>
+            <p>
+            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+            mauris vel est.
+            </p>
+            <p>
+            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos.
+            </p>
+        </div>
+    </div>
+</section>
 
-        </article>
-    </section>
-    <section id="equipement" class="offre">
-        <article class="contenu-offre">
-            <h2 class="titre">Équipement</h2>
-            <%= image_tag "backdrop.png", style: "width: 100%;" %>
-            <p>Trouvez tout le matériel dont vous avez besoin sur place</p>
-            <ul>
-                <li><%= fa_icon "camera", text: "Photographie" %></li>
-                <li><%= fa_icon "paint-brush", text: "Peinture" %></li>
-            </ul>
+<section id="autres-questions">
+    <h3 class="leger">Vous avez encore des questions à propos d'Irisium?</h3>
+    <p><a href="<%= accueil_contact_path %>" class="pure-button pure-button-primary">Posez une question</a></p>
+</section>
 
-        </article>
-    </section>
-</div>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$( function() {
+    $( "#accordion" ).accordion();
+} );
+</script>
