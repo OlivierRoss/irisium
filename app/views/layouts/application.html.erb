@@ -18,21 +18,26 @@
     </head>
 
     <body>
-        <p class="notice"><%= notice %></p><p class="alert"><%= alert %></p>
-        <div class="pure-menu pure-menu-horizontal">
-            <a href="<%= root_path %>" class="pure-menu-heading pure-menu-link" style="text-transform: uppercase;">Irisium</a>
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="<%= new_user_path %>" class="pure-menu-link"><%= fa_icon "instagram", class: "fa-lg" %></a></li> 
-                <li class="pure-menu-item"><a href="<%= new_user_path %>" class="pure-menu-link"><%= fa_icon "twitter", class: "fa-lg" %></a></li> 
-                <li class="pure-menu-item"><a href="<%= new_user_path %>" class="pure-menu-link"><%= fa_icon "facebook", class: "fa-lg" %></a></li> 
+        <% if notice %>
+            <p class="notice"> <%= notice %> </p>
+        <% end %>
+        <% if alert %>
+            <p class="alert"><%= alert %></p>
+        <% end %>
+        <header id="page-header">
+            <p><a href="<%= root_path %>" class="nom-header" style="text-transform: uppercase; float: left;">Irisium</a></p>
+            <ul class="liste-horizontale">
+                <li class="liste-horizontale-item"><a href="<%= new_user_path %>"><%= fa_icon "instagram", class: "fa-lg" %></a></li> 
+                <li class="liste-horizontale-item"><a href="<%= new_user_path %>"><%= fa_icon "twitter", class: "fa-lg" %></a></li> 
+                <li class="liste-horizontale-item"><a href="<%= new_user_path %>"><%= fa_icon "facebook", class: "fa-lg" %></a></li> 
 
-                <li class="pure-menu-item"><a href="<%= new_user_path %>" class="pure-menu-link">Inscription</a></li> 
-                <li class="pure-menu-item"><a href="<%= accueil_offre_path %>" class="pure-menu-link">Contact</a></li> 
-                <li class="pure-menu-item"><a href="<%= accueil_offre_path %>" class="pure-menu-link">FAQ</a></li> 
-                <li class="pure-menu-item"><a href="<%= evenements_path %>" class="pure-menu-link">Évenements</a></li> 
-                <li class="pure-menu-item"><a href="<%= evenements_path %>" class="pure-menu-link">À propos</a></li> 
+                <li id="inscription-header" class="liste-horizontale-item pure-button pure-button-primary"><a href="<%= new_user_path %>">Inscrivez-vous</a></li> 
+                <li class="liste-horizontale-item"><a href="<%= accueil_offre_path %>">Contact</a></li> 
+                <li class="liste-horizontale-item"><a href="<%= accueil_offre_path %>">FAQ</a></li> 
+                <li class="liste-horizontale-item"><a href="<%= evenements_path %>">Évenements</a></li> 
+                <li class="liste-horizontale-item"><a href="<%= evenements_path %>">À propos</a></li> 
             </ul>
-        </div>
+        </header>
 
         <section id="contenu-principal">
             <%= yield %>
@@ -45,11 +50,11 @@
             </div>
             <div id="geo" class="pure-u-1 pure-u-md-1-5"> 
                 <p><address>173 rue Wellington N.</address></p>
-                <h2 class="titre-section-footer">Informations</h2>
+                <h3 class="titre-section-footer">Informations</h3>
             </div>
             <div id="heures_ouverture" class="pure-u-1 pure-u-md-1-5"> 
                 <p>Heures d'ouverture</p>
-                <h2 class="titre-section-footer">Heures d'ouverture</h2>
+                <h3 class="titre-section-footer">Heures d'ouverture</h3>
             </div>
             <div id="reseaux" class="pure-u-1 pure-u-md-1-5">
                 <p>
@@ -57,7 +62,7 @@
                     <a href="<%= new_user_path %>"><%= fa_icon "twitter", class: "fa-lg" %></a>
                     <a href="<%= new_user_path %>"><%= fa_icon "facebook", class: "fa-lg" %></a>
                 </p>
-                <h2 class="titre-section-footer">Suivez-nous</h2>
+                <h3 class="titre-section-footer">Suivez-nous</h3>
             </div>
         </footer>
     </body>
