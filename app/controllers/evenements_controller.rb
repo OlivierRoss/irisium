@@ -6,7 +6,7 @@ class EvenementsController < ApplicationController
     # GET /evenements
     # GET /evenements.json
     def index
-        @evenements = Evenement.all
+        @evenements = Evenement.where("date >= ?", Date.today).order(:date)
     end
 
     # GET /evenements/1

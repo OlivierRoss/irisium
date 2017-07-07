@@ -1,15 +1,15 @@
-$hauteur-creativite: 300px;
+$hauteur-image-entete: 300px;
 $padding-section: 20px;
-$background-gris: rgb(245, 245, 245);
+$gris: rgb(245, 245, 245);
 
 #creativite {
     text-align: center;
     h3 {
         text-transform: uppercase;
         vertical-align: middle;
-        line-height: $hauteur-creativite;
+        line-height: $hauteur-image-entete;
     }
-    height: $hauteur-creativite;
+    height: $hauteur-image-entete;
     background-image: url("/assets/bar.jpg");
 }
 
@@ -22,7 +22,7 @@ $background-gris: rgb(245, 245, 245);
 }
 
 #mission {
-    background-color: $background-gris;
+    background-color: $gris;
     text-align: center;
     padding: $padding-section;
 
@@ -50,8 +50,8 @@ $background-gris: rgb(245, 245, 245);
         text-align: center;
         text-transform: uppercase;
         vertical-align: middle;
-        line-height: $hauteur-creativite;
-        height: $hauteur-creativite;
+        line-height: $hauteur-image-entete;
+        height: $hauteur-image-entete;
     }
     p {
         margin: $padding-section;
@@ -62,7 +62,7 @@ $background-gris: rgb(245, 245, 245);
 /***************************/
 
 #image-entete {
-    height: $hauteur-creativite;
+    height: $hauteur-image-entete;
     background-image: url("/assets/bar.jpg");
 }
 
@@ -70,7 +70,7 @@ $background-gris: rgb(245, 245, 245);
     width: 85%;
     padding: 15px 5%;
     margin: 20px auto;
-    background-color: $background-gris;
+    background-color: $gris;
 
     button[type=submit] {
         display: block;
@@ -90,6 +90,6 @@ $background-gris: rgb(245, 245, 245);
 }
 
 #autres-questions {
-    background-color: $background-gris;
+    background-color: $gris;
     margin-bottom: 20px;
 }

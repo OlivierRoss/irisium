@@ -1,68 +1,106 @@
-$hauteur-contenu: 500px;
+$hauter-image-entete: 300px;
+$demie-hauteur-image: 100px;
+$padding-section: 20px;
+$gris: rgb(245, 245, 245);
 
-#contenu-evenement {
-    padding: 10px;
+#liste-evenements {
+    padding: $padding-section;
 }
 
-#informations-evenement {
-    position: relative;
-    float: left;
+#entete-evenements {
+    border-bottom: 1px solid $gris;
 
-    width: 50%;
-    height: $hauteur-contenu;
-}
-
-#imagerie-evenement {
-    position: relative;
-    float: right;
-
-    width: 50%;
-    height: $hauteur-contenu;
-}
-
-#image-evenement {
-    width: 100%;
-    height: 100%;
-
-    img {
-        width: 100%;
-        height: 100%;
+    #recherche {
+        float: right;
     }
 }
 
-.informations-evenement {
-    position: relative;
-    float: left;
-    width: 50%;
-}
+#filtre-evenements {
+    border-bottom: 1px solid $gris;
 
-.informations-evenement::nth-of-type(2n) {
-    float: right;
-}
+    h3 {
+        float: left;
+    }
 
-.image-evenement {
-    position: relative;
-    float: right;
-    width: 50%;
-    height: 100%;
-
-    img {
-        margin: auto 0;
-        width: 75%;
-        height: 100%;
+    ul {
+        float: left;
+        list-style-type: none;
+        li {
+            display: inlin-block;
+            float: left;
+            padding: 5px 10px;
+        }
     }
 }
 
-.image-evenement::nth-child(2n) {
-    float: left;
+#themes-evenements {
+    ul {
+        list-style-type: none;
+        li {
+            display: inlin-block;
+            float: left;
+            padding: 5px 10px;
+        }
+    }
 }
 
 .evenement {
-    padding: 30px;
-    height: 250px;
+
+    .container-evenement {
+        padding: 10px;
+        position: relative;
+    }
+
+    .image-evenement {
+        height: 200px;
+        margin-bottom: -$demie-hauteur-image;
+
+        img {
+            display: block;
+            width: 70%;
+            height: 200px;
+            margin: 0 auto;
+        }
+    }
+
+    .informations-evenement {
+        padding: 10px;
+        padding-top: $demie-hauteur-image;
+        border: 5px solid $gris;
+        border-bottom: none;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .date-evenement {
+        text-align: center;
+        margin-left: 25px;
+        float: left;
+        width: calc(50% - 25px);
+        background-color: $gris;
+        border-bottom-left-radius: 15px;
+    }
+
+    .heure-evenement {
+        text-align: center;
+        margin-right: 25px;
+        float: right;
+        width: calc(50% - 25px);
+        background-color: rgb(135, 135, 135);
+        border-bottom-right-radius: 15px;
+    }
 }
 
-.administration-evenement {
-    width: 100%;
-    clear: both;
+#evenements-prochain-mois {
+    margin: 15px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    h2 {
+        display: inline;
+    }
 }
+
+
