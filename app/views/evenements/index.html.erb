@@ -65,6 +65,6 @@
     </div>
 </section>
 
-
-</section>
-<%= link_to 'New Evenement', new_evenement_path %>
+<% if @user and @user.niveau_admin > 10 %>
+    <%= link_to 'New Evenement', new_evenement_path %>
+<% end %>
