@@ -12,6 +12,7 @@ $gris: rgb(245, 245, 245);
 
     #recherche {
         float: right;
+        margin: 20px 0;
     }
 }
 
@@ -94,8 +95,8 @@ $gris: rgb(245, 245, 245);
 }
 
 #evenements-prochain-mois {
-    margin: 15px;
-    padding: 5px;
+    margin: 20px;
+    padding: 10px;
     background-color: black;
     color: white;
     h2 {

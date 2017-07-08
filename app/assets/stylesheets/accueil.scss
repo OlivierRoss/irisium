@@ -1,5 +1,5 @@
 $hauteur-image-entete: 300px;
-$padding-section: 20px;
+$padding-section: 30px;
 $gris: rgb(245, 245, 245);
 
 #creativite {
@@ -54,8 +54,14 @@ $gris: rgb(245, 245, 245);
         height: $hauteur-image-entete;
     }
     p {
-        margin: $padding-section;
+        padding: $padding-section;
         text-align: right;
+        margin: 0;
+
+        a {
+            color: black;
+            mix-blend-mode: color-burn;
+        }
     }
 }
 

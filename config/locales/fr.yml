@@ -1,7 +1,4 @@
 fr:
-    date:
-        order:
-            - "day"
-            - "month"
-            - "year"
-    a_venir: "À venir"
+    time:
+        formats:
+            ma: '%B %Y'

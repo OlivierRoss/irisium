@@ -5,3 +5,4 @@ require_relative 'application'
 Rails.application.initialize!
 
 I18n.default_locale = :fr
+I18n.available_locales = [:fr, :en]

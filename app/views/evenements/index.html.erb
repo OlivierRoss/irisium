@@ -2,7 +2,7 @@
 
 <section id="liste-evenements" class="pure-g">
     <div id="entete-evenements" class="pure-u-1">
-        <h2 class="pure-u-1 pure-u-md-2-24">Événements</h2>
+        <h2 class="pure-u-1 pure-u-md-3-24">Événements</h2>
         <div id="recherche" class="pure-u-md-5-24">
             <form><input id="champ-recherche" type="text"></form>
         </div>
@@ -33,7 +33,7 @@
     </div>
 
     <div id="evenements-prochain-mois" class="pure-u-1">
-        <h2><%= @evenements.first.date.month %> / <%= @evenements.first.date.year %></h2> | <%= @evenements.count %> événements
+        <h2><%= l(@evenements.first.date, format: :ma) %> | <%= @evenements.count %> événements</h2>
     </div>
 
     <div id="evenements-items" class="pure-g">

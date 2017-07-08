@@ -32,6 +32,7 @@ gem 'mailgun-ruby', '~>1.1.6'
 gem 'figaro'
 gem 'font-awesome-rails'
 gem 'purecss'
+gem 'rails-i18n', '~> 5.0.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
