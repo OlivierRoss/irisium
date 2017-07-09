@@ -9,7 +9,7 @@
     </div>
 
     <div id="filtre-evenements" class="pure-u-1">
-        <h3 class="">Filtres</h3>
+        <h3 class="">Categories</h3>
         <ul>
             <li>Rouge</li>
             <li>Rouge</li>
@@ -20,15 +20,9 @@
     </div>
     <div id="themes-evenements" class="pure-u-1">
         <ul>
-            <li>theme</li>
-            <li>theme</li>
-            <li>theme</li>
-            <li>theme</li>
-            <li>theme</li>
-            <li>Rouge</li>
-            <li>Rouge</li>
-            <li>Rouge</li>
-            <li>Rouge</li>
+            <% (0..10).each do |mois| %>
+                <li><%= l(Date.today.advance(:months => mois), format: :mois) %></li>
+            <% end %>
         </ul>
     </div>
 

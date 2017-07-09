@@ -2,3 +2,6 @@ fr:
     time:
         formats:
             ma: '%B %Y'
+    date:
+        formats:
+            mois: '%B'
