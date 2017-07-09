@@ -1,3 +1,5 @@
+@import "font-awesome"; 
+
 $hauteur-image-entete: 300px;
 $padding-section: 30px 0px;
 $gris: rgb(245, 245, 245);
@@ -92,11 +94,23 @@ $gris: rgb(245, 245, 245);
 /***************************/
 
 #questions-reponses {
-    width: 85%;
-    padding: 15px 5%;
+    width: 80%;
+    padding: 35px 10%;
 }
 
 #autres-questions {
     background-color: $gris;
-    margin-bottom: 20px;
 }
+
+#accordion {
+
+    h3 {
+        border-bottom: 3px solid $gris;
+        padding-bottom: 5px;
+    }
+
+    .icon-accordeon {
+        float: right;
+    }
+}
+

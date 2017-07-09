@@ -2,6 +2,10 @@
 // All this logic will automatically be available in application.js.
 
 window.onload = function () {
+
+    // Seulement pour la page evenements 
+    if(window.location.pathname != "/evenements") return;
+
     document.getElementById("champ-recherche").addEventListener("change", filtrer_evenements);
     console.log('ici');
 };
