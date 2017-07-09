@@ -62,8 +62,13 @@ $( function() {
     $("#accordion").accordion({
         active: false,
         activate: function (event, ui) {
-            ui.oldHeader.context.childNodes[2].firstChild.className = "fa fa-plus-circle"
-            ui.newHeader.context.childNodes[2].firstChild.className = "fa fa-minus-circle"
+            console.log(ui);
+            if(ui.oldHeader.context) {
+                ui.oldHeader.context.childNodes[2].firstChild.className = "fa fa-plus-circle"
+            }
+            if(ui.newHeader.context) {
+                ui.newHeader.context.childNodes[2].firstChild.className = "fa fa-minus-circle"
+            }
         },
         heightStyle: "content",
         collapsible: true
