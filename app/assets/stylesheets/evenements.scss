@@ -2,6 +2,7 @@ $hauter-image-entete: 300px;
 $demie-hauteur-image: 100px;
 $padding-section: 20px;
 $gris: rgb(245, 245, 245);
+$gris-fonce: rgb(145, 145, 145);
 
 #liste-evenements {
     padding: $padding-section;
@@ -38,7 +39,7 @@ $gris: rgb(245, 245, 245);
     ul {
         list-style-type: none;
         li {
-            display: inlin-block;
+            display: inline-block;
             float: left;
             padding: 5px 10px;
         }
@@ -48,48 +49,43 @@ $gris: rgb(245, 245, 245);
 .evenement {
 
     .container-evenement {
-        padding: 10px;
+        padding: 20px;
         position: relative;
     }
 
     .image-evenement {
-        height: 200px;
-        margin-bottom: -$demie-hauteur-image;
-
         img {
             display: block;
-            width: 70%;
-            height: 200px;
+            width: 75%;
             margin: 0 auto;
         }
     }
 
     .informations-evenement {
-        padding: 10px;
-        padding-top: $demie-hauteur-image;
-        border: 5px solid $gris;
-        border-bottom: none;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        width: 80%;
+        box-shadow: 0 0 10px 5px $gris-fonce;
+        border-radius: 15px;
+        width: 85%;
         margin: 0 auto;
+
+        .nom-evenement, .description-evenement {
+            padding: 15px;
+            margin: 0;
+        }
+
+        .nom-evenement {
+            padding-bottom: 0px;
+        }
     }
 
     .date-evenement {
         text-align: center;
-        margin-left: 25px;
-        float: left;
-        width: calc(50% - 25px);
         background-color: $gris;
         border-bottom-left-radius: 15px;
     }
 
     .heure-evenement {
         text-align: center;
-        margin-right: 25px;
-        float: right;
-        width: calc(50% - 25px);
-        background-color: rgb(135, 135, 135);
+        background-color: $gris-fonce;
         border-bottom-right-radius: 15px;
     }
 }
