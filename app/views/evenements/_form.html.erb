@@ -36,6 +36,15 @@
     <%= form.text_field :lieu, id: :evenement_lieu %>
   </div>
 
+  <div class="field">
+    <%= form.label :categorie %>
+    <select id="evenement_categorie" name="evenement[categorie]">
+        <% Evenement::categories.each do |cat| %>
+            <option value="<%= cat.last %>"><%= cat.first %></option>
+        <% end %>
+    </select>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

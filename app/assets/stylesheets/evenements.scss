@@ -33,6 +33,16 @@ $gris-fonce: rgb(145, 145, 145);
             padding: 5px 10px;
         }
     }
+
+    .filtre-categorie {
+        background-color: $gris;
+        padding: 5px 15px;
+        margin: 0 10px;
+    }
+
+    .filtre-categorie:hover {
+        background-color: $gris-fonce;
+    }
 }
 
 #themes-evenements {
@@ -54,10 +64,19 @@ $gris-fonce: rgb(145, 145, 145);
     }
 
     .image-evenement {
+        position: relative;
         img {
             display: block;
             width: 75%;
             margin: 0 auto;
+        }
+
+        .categorie-evenement {
+            position: absolute;
+            top: 0px;
+            right: 15%;
+            height: 20px;
+            width: 20px;
         }
     }
 

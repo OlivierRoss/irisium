@@ -11,11 +11,9 @@
     <div id="filtre-evenements" class="pure-u-1">
         <h3 class="">Catégories</h3>
         <ul>
-            <li>Rouge</li>
-            <li>Rouge</li>
-            <li>Rouge</li>
-            <li>Rouge</li>
-            <li>Rouge</li>
+            <% Evenement::categories.each do |cat| %>
+                <li class="filtre-categorie"><%= cat.first %></li>
+            <% end %>
         </ul>
     </div>
     <div id="themes-evenements" class="pure-u-1">
@@ -34,8 +32,17 @@
         <% @evenements.each do |evenement| %>
             <article class="evenement pure-u-1 pure-u-md-1-3">
                 <div class="container-evenement">
-                    <div class="image-evenement"><%= link_to(image_tag(image_show_path evenement.image_id), evenement) %></div>
+                    <div class="image-evenement">
+                        <%= link_to(image_tag(image_show_path evenement.image_id), evenement) %>
+                        <div class="categorie-evenement" data-categorie="<%= evenement.categorie %>" style="background-color: red"></div>
+                    </div>
                     <div class="informations-evenement pure-g">
+                        <% if @user and @user.niveau_admin > 1 %>
+                            <div class="administration-evenement pure-u-1">
+                                <%= link_to 'Modifier', edit_evenement_path(evenement) %>
+                                <%= link_to 'Supprimer', evenement, method: :delete, data: { confirm: 'La suppression est irréversisble. Continuer?' } %>
+                            </div>
+                        <% end %>
                         <h3 class="nom-evenement pure-u-1"><%= evenement.nom %></h3>
                         <p class="description-evenement pure-u-1"><%= evenement.description %></p>
                         <div class="date-evenement pure-u-1-2">
@@ -46,28 +53,23 @@
                         </div>
                     </div>
                 </div>
-                <% if @user and @user.niveau_admin > 10 %>
-                    <div class="administration-evenement">
-                        <%= link_to 'Edit', edit_evenement_path(evenement) %>
-                        <%= link_to 'Destroy', evenement, method: :delete, data: { confirm: 'Are you sure?' } %>
-                    </div>
-                    <%= link_to 'Edit', edit_evenement_path(evenement) %>
-                    <%= link_to 'Destroy', evenement, method: :delete, data: { confirm: 'Are you sure?' } %>
-                <% end %>
             </article>
         <% end %>
     </div>
 </section>
 
-<% if @user and @user.niveau_admin > 10 %>
-    <%= link_to 'New Evenement', new_evenement_path %>
+<% if @user and @user.niveau_admin >= 0 %>
+    <section class="pure-u-1" style="text-align: center; padding: 15px; background-color: rgb(135, 135, 135);">
+        <%= link_to 'Créer un événement', new_evenement_path %>
+    </section>
 <% end %>
 
 <script>
-$(function () {
+$(document).ready(function () {
     $(".evenement .image-evenement").each(function (i, e) {
-        e.style.marginBottom = -e.firstChild.firstChild.height / 2 + "px";
-        e.nextElementSibling.style.paddingTop = e.firstChild.firstChild.height / 2 + "px";
+        var demie_hauteur_image = e.firstElementChild.firstElementChild.height / 2; 
+        e.style.marginBottom = -demie_hauteur_image + "px";
+        e.nextElementSibling.style.paddingTop = demie_hauteur_image + "px";
     });
 });
 </script>
