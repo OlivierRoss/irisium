@@ -40,10 +40,10 @@
                         <p><%= evenement.description %></p>
                     </div>
                     <div class="date-evenement">
-                        <p><%= evenement.date.wday %></p>
+                        <p><%= l(evenement.date, format: :jour_semaine) %> <b><%= evenement.date.day %></b> <%= l(evenement.date, format: :mois) %> </p>
                     </div>
                     <div class="heure-evenement">
-                        <p><%= evenement.date.hour %></p>
+                        <p>À <b><%= l(evenement.date, format: :heure) %>h<%= l(evenement.date, format: :minutes) %></b></p>
                     </div>
                 </div>
                 <% if @user and @user.niveau_admin > 10 %>

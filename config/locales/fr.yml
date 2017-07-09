@@ -2,6 +2,10 @@ fr:
     time:
         formats:
             ma: '%B %Y'
+            mois: '%B'
+            jour_semaine: '%A'
+            heure: '%H'
+            minutes: '%m'
     date:
         formats:
             mois: '%B'
