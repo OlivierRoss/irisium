@@ -9,15 +9,25 @@ $gris-fonce: rgb(145, 145, 145);
 }
 
 #entete-evenements {
+    margin: 0 20px;
+    padding: 10px;
     border-bottom: 1px solid $gris;
 
     #recherche {
-        float: right;
         margin: 20px 0;
+        float: right;
+
+        #champ-recherche {
+            float: right;
+            border-radius: 15px;
+        }
     }
 }
 
 #filtre-evenements {
+    margin: 0 20px;
+    padding: 10px;
+
     border-bottom: 1px solid $gris;
 
     h3 {
@@ -46,14 +56,12 @@ $gris-fonce: rgb(145, 145, 145);
 }
 
 #themes-evenements {
-    ul {
-        list-style-type: none;
-        li {
-            display: inline-block;
-            float: left;
-            padding: 5px 10px;
-        }
-    }
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-around;
+
 }
 
 .evenement {
