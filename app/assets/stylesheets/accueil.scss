@@ -3,6 +3,7 @@
 $hauteur-image-entete: 700px;
 $padding-section: 30px 0px;
 $gris: rgb(245, 245, 245);
+$accent: orange;
 
 #creativite {
     text-align: center;
@@ -36,6 +37,13 @@ $gris: rgb(245, 245, 245);
             padding: 5px 30px;
             border: 2px solid rgb(200, 200, 200);
         }
+    }
+
+    .image-mission {
+        padding: 5px;
+        width: 40px;
+        border: 2px solid $accent;
+        border-radius: 50px;
     }
 }
 
