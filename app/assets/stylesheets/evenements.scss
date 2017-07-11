@@ -19,7 +19,6 @@ $gris-fonce: rgb(145, 145, 145);
 
         #champ-recherche {
             float: right;
-            border-radius: 15px;
         }
     }
 }
@@ -82,15 +81,14 @@ $gris-fonce: rgb(145, 145, 145);
         .categorie-evenement {
             position: absolute;
             top: 0px;
-            right: 15%;
-            height: 20px;
-            width: 20px;
+            right: 12.5%;
+            height: 35px;
+            width: 35px;
         }
     }
 
     .informations-evenement {
-        box-shadow: 0 0 10px 5px $gris-fonce;
-        border-radius: 15px;
+        box-shadow: 0 0 50px -20px $gris-fonce;
         width: 85%;
         margin: 0 auto;
 
@@ -105,25 +103,29 @@ $gris-fonce: rgb(145, 145, 145);
     }
 
     .date-evenement {
+        font-size: 0.9em;
         text-align: center;
         background-color: $gris;
-        border-bottom-left-radius: 15px;
     }
 
     .heure-evenement {
+        font-size: 0.9em;
         text-align: center;
         background-color: $gris-fonce;
-        border-bottom-right-radius: 15px;
     }
 }
 
 #evenements-prochain-mois {
-    margin: 20px;
+    margin: 41px;
     padding: 10px;
     background-color: black;
     color: white;
     h2 {
         display: inline;
+        .nb-evenements {
+            font-size: 0.5em;
+            color: $gris;
+        }
     }
 }
 

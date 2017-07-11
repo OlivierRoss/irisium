@@ -1,6 +1,6 @@
 @import "font-awesome"; 
 
-$hauteur-image-entete: 300px;
+$hauteur-image-entete: 700px;
 $padding-section: 30px 0px;
 $gris: rgb(245, 245, 245);
 
@@ -48,12 +48,13 @@ $gris: rgb(245, 245, 245);
 }
 
 #evenements-futurs {
+    height: 300px;
     h2 {
+        color: white;
+        text-shadow: 1px 1px black;
+        padding-top: 145px;
         text-align: center;
         text-transform: uppercase;
-        vertical-align: middle;
-        line-height: $hauteur-image-entete;
-        height: $hauteur-image-entete;
     }
     p {
         padding: $padding-section;
@@ -64,6 +65,7 @@ $gris: rgb(245, 245, 245);
             color: white;
             text-shadow: 1px 1px black;
             background-color: transparent;
+            padding: 20px;
         }
     }
 }
@@ -107,6 +109,9 @@ $gris: rgb(245, 245, 245);
     h3 {
         border-bottom: 3px solid $gris;
         padding-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.95em;
     }
 
     .icon-accordeon {
