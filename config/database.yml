@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: irisium_production
-  username: irisium
+  database: irisium
+  username: rails
   password: <%= ENV['IRISIUM_DATABASE_PASSWORD'] %>
