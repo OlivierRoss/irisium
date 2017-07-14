@@ -1,8 +1,4 @@
-$hauter-image-entete: 300px;
-$demie-hauteur-image: 100px;
-$padding-section: 20px;
-$gris: rgb(245, 245, 245);
-$gris-fonce: rgb(145, 145, 145);
+@import 'variables';
 
 #liste-evenements {
     padding: $padding-section;
@@ -88,7 +84,7 @@ $gris-fonce: rgb(145, 145, 145);
     }
 
     .informations-evenement {
-        box-shadow: 0 0 50px -20px $gris-fonce;
+        box-shadow: $box-shadow;
         width: 85%;
         margin: 0 auto;
 
@@ -129,4 +125,53 @@ $gris-fonce: rgb(145, 145, 145);
     }
 }
 
+/* ----------- */
 
+#informations-evenement {
+    margin: 20px;
+    padding: $padding-section;
+}
+
+#titre-evenement {
+    font-family: montserrat-regular;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+#categorie-evenement, #date-evenement {
+    float: left; 
+    display: inline;
+}
+
+#date-evenement {
+
+    p {
+        float: left;
+        padding: 10px 20px;
+        background-color: $gris;
+        margin: 0px;
+    }
+
+    .heure {
+        background-color: $gris-fonce;
+    }
+}
+
+#description-evenement {
+    clear: both;
+    padding: 20px 10px;
+    border-bottom: 2px solid $gris;
+}
+
+#image-evenement {
+    img {
+        width: 100%;
+        height: $hauteur-image-entete;
+    }
+}
+
+#evenements-a-venir {
+    margin: 0 20px;
+}

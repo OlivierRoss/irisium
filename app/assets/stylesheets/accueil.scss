@@ -1,9 +1,5 @@
 @import "font-awesome"; 
-
-$hauteur-image-entete: 700px;
-$padding-section: 30px 0px;
-$gris: rgb(245, 245, 245);
-$accent: orange;
+@import "variables"; 
 
 #creativite {
     text-align: center;
@@ -50,7 +46,9 @@ $accent: orange;
 #inscrivez-vous-maintenant , #autres-questions{
     text-align: center;
     padding: $padding-section;
+
     h3 {
+        font-family: montserrat-light;
         text-transform: uppercase;
     }
 }

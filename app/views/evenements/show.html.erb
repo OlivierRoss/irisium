@@ -1,29 +1,62 @@
-<div id="contenu-evenement">
-    <div id="informations-evenement">
-        <div id="titre-evenement" class="titre">
-            <strong><%= @evenement.nom %></strong>
-        </div>
-        <div id="date-evenement">
-            <%= @evenement.date %>
-        </div>
-        <div id="description-evenement">
-            <%= @evenement.description %>
-        </div>
-        <div id="lieu-evenement">
-            <%= @evenement.lieu %>
-        </div>
-    </div>
-    <div id="imagerie-evenement">
-        <div id="image-evenement">
-            <%= image_tag image_show_path(@image) %>
-        </div>
-        <div id="carte-evenement">
-            Google Maps
-        </div>
-    </div>
+<section id="image-evenement" class="pure-u-1">
+    <%= image_tag(image_show_path @evenement.image_id) %>
+</section>
 
-    <footer>
+<section id="main">
+    <section id="contenu-evenement">
+        <div id="informations-evenement">
+            <div id="titre-evenement" class="titre">
+                <strong><%= @evenement.nom %></strong>
+            </div>
+            <div id="categorie-evenement">
+                <%= image_categorie(@evenement.categorie) %>
+            </div>
+            <div id="date-evenement">
+                <p><%= l(@evenement.date, format: :jour_semaine) %> <b><%= @evenement.date.day %></b> <%= l(@evenement.date, format: :mois) %> </p><p class="heure">À <b><%= l(@evenement.date, format: :heure) %>h<%= l(@evenement.date, format: :minutes) %></b></p>
+            </div>
+            <div id="description-evenement">
+                <%= @evenement.description %>
+            </div>
+        </div>
+
+        <div id="evenements-items" class="pure-g">
+            <h2 id="evenements-a-venir" class="pure-u-1">Événements à venir</h2>
+
+            <% @evenements.each do |evenement| %>
+                <article class="evenement pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
+                    <div class="container-evenement">
+                        <div class="image-evenement">
+                            <%= link_to(image_tag(image_show_path evenement.image_id), evenement) %>
+                            <div class="categorie-evenement" data-categorie="<%= evenement.categorie %>">
+                                <%= image_categorie(@evenement.categorie) %>
+                            </div>
+                        </div>
+                        <div class="informations-evenement pure-g">
+                            <% if @user and @user.niveau_admin > 1 %>
+                                <div class="administration-evenement pure-u-1">
+                                    <%= link_to 'Modifier', edit_evenement_path(evenement) %>
+                                    <%= link_to 'Supprimer', evenement, method: :delete, data: { confirm: 'La suppression est irréversisble. Continuer?' } %>
+                                </div>
+                            <% end %>
+                            <h3 class="nom-evenement pure-u-1"><%= evenement.nom %></h3>
+                            <p class="description-evenement pure-u-1"><%= evenement.description %></p>
+                            <div class="date-evenement pure-u-1-2">
+                                <p><%= l(evenement.date, format: :jour_semaine) %> <b><%= evenement.date.day %></b> <%= l(evenement.date, format: :mois) %> </p>
+                            </div>
+                            <div class="heure-evenement pure-u-1-2">
+                                <p>À <b><%= l(evenement.date, format: :heure) %>h<%= l(evenement.date, format: :minutes) %></b></p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            <% end %>
+        </div>
+    </section>
+
+
+    <% if @user and @user.niveau_admin >= 1 %>
         <%= link_to 'Edit', edit_evenement_path(@evenement) %> |
         <%= link_to 'Back', evenements_path %>
-    <footer>
-</div>
+    <% end %>
+
+</section>

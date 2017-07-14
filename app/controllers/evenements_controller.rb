@@ -12,7 +12,7 @@ class EvenementsController < ApplicationController
     # GET /evenements/1
     # GET /evenements/1.json
     def show
-        @image = Image.find(@evenement.image_id)
+        @evenements = Evenement.where("date >= ?", Date.today).order(:date).limit(3)
     end
 
     # GET /evenements/new

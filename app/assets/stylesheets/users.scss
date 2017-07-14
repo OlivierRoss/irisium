@@ -1,7 +1,39 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'variables';
 
-.formulaire {
-    margin: 100px;
+#abonnements-disponibles {
+    padding: $padding-section;
+    margin: 20px;
+}
+
+#abonnement-occasionnel {
+}
+
+#abonnement-regulier {
+}
+
+#abonnement-entreprise {
+}
+
+.forfait {
+    height: inherit;
+    text-align: center;
+    box-shadow: $box-shadow;
+
+    h2 {
+        margin: 0;
+    }
+}
+
+.contenu-forfait {
+    padding: 20px;
+}
+
+.forfait-grand {
+    height: 500px;
+}
+
+.forfait-petit {
+    margin-top: 50px;
+    height: 400px;
+    background-color: $gris;
 }

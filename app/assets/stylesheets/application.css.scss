@@ -18,16 +18,22 @@
  */
 
 @import "font-awesome";
+@import "variables";
 
 @font-face {  
-    font-family: montserrat;  
-    src: url('/assets/Montserrat-Regular.otf'); 
+    font-family: montserrat-light;  
+    src: url('/assets/montserrat/MontserratAlternates-Light.otf'); 
+}
+
+@font-face {  
+    font-family: montserrat-reg;  
+    src: url('/assets/montserrat/Montserrat-Regular.otf'); 
 }
 
 body {
     background-color: white;
     margin-top: -16px;
-    font-family: montserrat;
+    font-family: montserrat-reg;
 }
 
 #page-header {
@@ -95,4 +101,8 @@ a {
 
 #inscription-header {
     margin-top: -9px;
+}
+
+#main {
+    padding: 30px;
 }
