@@ -16,7 +16,24 @@
     text-align: center;
     padding: $padding-section;
     h3 {
+        font-family: montserrat-reg;
         text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    p {
+        font-size: 0.95em;
+        font-family: montserrat-extra-light;
+    }
+
+    .lien {
+        a {
+            color: $accent;
+        }
+        font-size: 0.95em;
+        font-family: montserrat-semi-bold;
+        text-transform: uppercase;
+        text-decoration: underline;
     }
 }
 
@@ -24,14 +41,17 @@
     background-color: $gris;
     text-align: center;
     padding: $padding-section;
-
+    
     .titre-section {
-        margin: 20px;
-        
+        margin: 30px;
+        margin-bottom: 50px;
+        color: $accent;
+
         span {
             text-transform: uppercase;
             padding: 5px 30px;
             border: 2px solid rgb(200, 200, 200);
+            font-family: montserrat-semi-bold;
         }
     }
 
@@ -41,6 +61,12 @@
         border: 2px solid $accent;
         border-radius: 50px;
     }
+
+    p {
+        font-size: 0.90em;
+        font-family: montserrat-extra-light;
+        padding: 0 25%;
+    }
 }
 
 #inscrivez-vous-maintenant , #autres-questions{
@@ -48,8 +74,8 @@
     padding: $padding-section;
 
     h3 {
-        font-family: montserrat-light;
-        text-transform: uppercase;
+        font-weight: normal;
+        font-family: montserrat-extra-light;
     }
 }
 

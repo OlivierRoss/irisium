@@ -6,6 +6,7 @@
 }
 
 #abonnement-occasionnel {
+    overflow: hidden;
 }
 
 #abonnement-regulier {
@@ -25,7 +26,8 @@
 }
 
 .contenu-forfait {
-    padding: 20px;
+    padding: 10% 20px;
+    padding-bottom: 5%;
 }
 
 .forfait-grand {
@@ -36,4 +38,35 @@
     margin-top: 50px;
     height: 400px;
     background-color: $gris;
+}
+
+.forfait-spacer {
+    width: 15%;
+    margin: 10px auto;
+    height: 2px;
+    background-color: $gris-fonce;
+}
+
+.forfait-prix {
+    font-size: 1.3em;
+    font-family: montserrat-bold;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.forfait-prix-unite {
+    font-size: 0.7em;
+    font-family: montserrat-light;
+}
+
+.forfait-note {
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.banniere {
+    background-color: $accent;
+    height: 30px;
+    transform: translate(-100px) rotate(-45deg) scale(0.8) translate(0px);
 }

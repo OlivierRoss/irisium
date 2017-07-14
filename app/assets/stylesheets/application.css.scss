@@ -21,13 +21,33 @@
 @import "variables";
 
 @font-face {  
+    font-family: montserrat-extra-light;  
+    src: url('/assets/montserrat/Montserrat-ExtraLight.otf'); 
+}
+
+@font-face {  
     font-family: montserrat-light;  
-    src: url('/assets/montserrat/MontserratAlternates-Light.otf'); 
+    src: url('/assets/montserrat/Montserrat-Light.otf'); 
 }
 
 @font-face {  
     font-family: montserrat-reg;  
     src: url('/assets/montserrat/Montserrat-Regular.otf'); 
+}
+
+@font-face {  
+    font-family: montserrat-medium;  
+    src: url('/assets/montserrat/Montserrat-Medium.otf'); 
+}
+
+@font-face {  
+    font-family: montserrat-semi-bold;  
+    src: url('/assets/montserrat/Montserrat-SemiBold.otf'); 
+}
+
+@font-face {  
+    font-family: montserrat-bold;  
+    src: url('/assets/montserrat/Montserrat-Bold.otf'); 
 }
 
 body {
@@ -62,7 +82,7 @@ body {
 }
 
 .titre-section-footer {
-    font-family: 'montserrat';
+    font-family: montserrat-bold;
     text-transform: uppercase;
 }
 
