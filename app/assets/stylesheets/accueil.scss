@@ -114,7 +114,7 @@
 
 #image-entete {
     height: $hauteur-image-entete;
-    background-image: url("/assets/images/bar.jpg");
+    background-image: asset-url("/assets/bar.jpg");
 }
 
 #formulaire-contact {

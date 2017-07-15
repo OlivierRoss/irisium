@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
-gem 'mailgun-ruby', '~>1.1.6'
+gem 'mailgun_rails'
 gem 'figaro'
 gem 'font-awesome-rails'
 gem 'purecss'

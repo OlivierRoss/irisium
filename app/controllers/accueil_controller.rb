@@ -13,7 +13,7 @@ class AccueilController < ApplicationController
     end
 
     def contact
-
+	ContactMailer.contact_email.deliver_now
     end
 
 end
