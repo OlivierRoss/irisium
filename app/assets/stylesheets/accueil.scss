@@ -9,7 +9,7 @@
         line-height: $hauteur-image-entete;
     }
     height: $hauteur-image-entete;
-    background-image: url("/assets/bar.jpg");
+    background-image: asset-url('bar.jpg');
 }
 
 #description-irisium {
@@ -32,7 +32,7 @@
             color: $accent;
         }
         font-size: 0.95em;
-        font-family: montserrat-semi-bold;
+        font-family: 'montserrat-semi-bold';
         text-transform: uppercase;
         text-decoration: underline;
     }
@@ -114,7 +114,7 @@
 
 #image-entete {
     height: $hauteur-image-entete;
-    background-image: url("/assets/bar.jpg");
+    background-image: url("/assets/images/bar.jpg");
 }
 
 #formulaire-contact {

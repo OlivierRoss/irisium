@@ -17,38 +17,38 @@
  *
  */
 
-@import "font-awesome";
-@import "variables";
-
 @font-face {  
-    font-family: montserrat-extra-light;  
-    src: url('/assets/montserrat/Montserrat-ExtraLight.otf'); 
+    font-family: 'montserrat-extra-light';  
+    src: asset-url('montserrat/Montserrat-ExtraLight.otf'); 
 }
 
 @font-face {  
     font-family: montserrat-light;  
-    src: url('/assets/montserrat/Montserrat-Light.otf'); 
+    src: asset-url('montserrat/Montserrat-Light.otf'); 
 }
 
 @font-face {  
     font-family: montserrat-reg;  
-    src: url('/assets/montserrat/Montserrat-Regular.otf'); 
+    src: asset-url('montserrat/Montserrat-Regular.otf');
 }
 
 @font-face {  
     font-family: montserrat-medium;  
-    src: url('/assets/montserrat/Montserrat-Medium.otf'); 
+    src: asset-url('montserrat/Montserrat-Medium.otf'); 
 }
 
 @font-face {  
-    font-family: montserrat-semi-bold;  
-    src: url('/assets/montserrat/Montserrat-SemiBold.otf'); 
+    font-family: 'montserrat-semi-bold';  
+    src: asset-url('montserrat/Montserrat-SemiBold.otf'); 
 }
 
 @font-face {  
-    font-family: montserrat-bold;  
-    src: url('/assets/montserrat/Montserrat-Bold.otf'); 
+    font-family: 'montserrat-bold';  
+    src: asset-url('montserrat/Montserrat-Bold.otf');
 }
+
+@import "font-awesome";
+@import "variables";
 
 body {
     background-color: white;
