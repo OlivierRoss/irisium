@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   get 'accueil/contact'
+  post 'accueil/demande_contact'
+  
   get 'accueil/faq'
   get 'accueil/a_propos'
 
