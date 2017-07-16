@@ -3,7 +3,7 @@ class ContactMailer < ApplicationMailer
 	layout 'mailer'
 
 	def contact_email (params)
-        @params = params
-		mail(to: 'admin@irisium.ca', subject: 'Demande de contact')
+		@params = params
+		mail(to: 'info@irisium.ca', subject: 'Demande de contact')
 	end
 end
