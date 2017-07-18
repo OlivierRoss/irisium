@@ -114,7 +114,7 @@
 
 #image-entete {
     height: $hauteur-image-entete;
-    background-image: asset-url("/assets/bar.jpg");
+    background-image: asset-url("bar.jpg");
 }
 
 #formulaire-contact {
@@ -134,9 +134,14 @@
 
 /***************************/
 
+
 #questions-reponses {
     width: 80%;
     padding: 35px 10%;
+
+	h2 {
+		letter-spacing: 2px;
+	}
 }
 
 #autres-questions {

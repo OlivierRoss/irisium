@@ -2,10 +2,17 @@
    
    <head>
       <meta content = 'text/html; charset = UTF-8' http-equiv = 'Content-Type' />
+	<style>
+		header, footer { width: 100%; background-color: black; color: white; }
+	</style>
    </head>
    
    <body>
-        <%= params.to_json %> 
-      
+	<header> Irisium </header>
+	
+        <p><%= "#{params[:prenom]} #{params[:nom]}" %> <a href="mailto:<%= params[:courriel] %>"> ( <%= params[:courriel] %> ) </a></p>
+        <p><%= params[:message] %> </p>
+	
+	<footer> Les vrais paradis sont ceux que nous avons perdus - Marcel Proust </footer>
    </body>
 </html>
