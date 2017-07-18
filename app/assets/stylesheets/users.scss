@@ -10,9 +10,11 @@
 }
 
 #abonnement-regulier {
+    overflow: hidden;
 }
 
 #abonnement-entreprise {
+    overflow: hidden;
 }
 
 .forfait {
@@ -69,4 +71,10 @@
     background-color: $accent;
     height: 30px;
     transform: translate(-100px) rotate(-45deg) scale(0.8) translate(0px);
+}
+
+.banniere-inversee {
+    background-color: $accent;
+    height: 30px;
+    transform: translate(100px) rotate(45deg) scale(0.8) translate(0px);
 }

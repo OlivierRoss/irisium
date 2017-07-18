@@ -48,9 +48,14 @@
     .filtre-categorie:hover {
         background-color: $gris-fonce;
     }
+    
+    .filtre-actif {
+        background-color: black;
+        color: red;
+    }
 }
 
-#themes-evenements {
+#mois-evenements {
 
     padding: 20px;
 
