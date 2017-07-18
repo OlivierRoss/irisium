@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
 
-  get 'accueil/contact'
+  get 'contact', to: "accueil#contact"
   post 'accueil/demande_contact'
   
-  get 'accueil/faq'
-  get 'accueil/a_propos'
+  get 'faq', to: "accueil#faq"
+  get 'a_propos', to: "accueil#a_propos"
 
   devise_for :users
   root 'accueil#index'
-  get 'accueil/index'
+
+  get 'index', to: "accueil#index"
 
   get 'image/show'
 
