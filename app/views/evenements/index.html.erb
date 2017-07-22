@@ -10,17 +10,19 @@
         </div>
 
         <div id="filtre-evenements" class="pure-u-1">
-            <h3 class="">Catégories</h3>
             <ul>
                 <% Evenement::categories.each do |cat| %>
-                    <li class="filtre-categorie" data-id-categorie="<%= cat.last %>"><%= cat.first %></li>
+                    <li class="filtre-categorie" data-id-categorie="<%= cat.last %>"><%= image_categorie(cat.last) %></li>
                 <% end %>
             </ul>
         </div>
+
         <div id="mois-evenements" class="pure-u-1">
+            <ul>
             <% (0..10).each do |mois| %>
-                <div class="filtre-mois" data-id-mois="<%= Date.today.advance(:months => mois).mon %>"><%= l(Date.today.advance(:months => mois), format: :mois) %></div>
+                <li class="filtre-mois" data-id-mois="<%= Date.today.advance(:months => mois).mon %>"><%= l(Date.today.advance(:months => mois), format: :mois) %></li>
             <% end %>
+            </ul>
         </div>
 
         <div id="evenements-prochain-mois" class="pure-u-1">
@@ -92,14 +94,6 @@ $(document).ready(function () {
         });
     });
 
-    // Images
-    setTimeout(function () {
-        $(".evenement .image-evenement").each(function (i, e) {
-            var demie_hauteur_image = e.firstElementChild.firstElementChild.height / 2; 
-            e.style.marginBottom = -demie_hauteur_image + "px";
-            e.nextElementSibling.style.paddingTop = demie_hauteur_image + "px";
-        });
-    }, 500)
 });
 
 // Fonction necessaires

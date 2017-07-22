@@ -15,7 +15,10 @@
                     </div>
                 <% end %>
                 <h3 class="nom-evenement pure-u-1"><%= evenement.nom %></h3>
-                <p class="description-evenement pure-u-1"><%= evenement.description %></p>
+                <p class="description-evenement pure-u-1">
+                    <%= evenement.description %>
+                    <span class="cacheur"></span>
+                </p>
                 <div class="date-evenement pure-u-1-2">
                     <p><%= l(evenement.date, format: :jour_semaine) %> <b><%= evenement.date.day %></b> <%= l(evenement.date, format: :mois) %> </p>
                 </div>
