@@ -120,20 +120,28 @@
     }
 
     .image-evenement {
-        position: relative;
         img {
             display: block;
-            width: 80%;
             height: 225px;
-            margin: 0 auto;
+            width: 100%;
+        }
+
+        .container-image-evenement {
+            position: relative;
+            padding: 0 10%;
+            width: 80%;
+
         }
 
         .categorie-evenement {
             position: absolute;
+            right: 10%;
             top: 0px;
-            right: 9%;
-            height: 35px;
-            width: 35px;
+
+            img {
+                height: 35px;
+                width: 35px;
+            }
         }
     }
 
@@ -198,6 +206,12 @@
 #categorie-evenement, #date-evenement {
     float: left; 
     display: inline;
+}
+
+#categorie-evenement {
+    img {
+        width: 39px;
+    }
 }
 
 #date-evenement {
