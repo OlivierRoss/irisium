@@ -9,7 +9,7 @@
                 <strong><%= @evenement.nom %></strong>
             </div>
             <div id="categorie-evenement">
-                <%= image_categorie(@evenement.categorie) %>
+                <%= image_categorie(@evenement.categorie, true) %>
             </div>
             <div id="date-evenement">
                 <p><%= l(@evenement.date, format: :jour_semaine) %> <b><%= @evenement.date.day %></b> <%= l(@evenement.date, format: :mois) %> </p><p class="heure">À <b><%= l(@evenement.date, format: :heure) %>h<%= l(@evenement.date, format: :minutes) %></b></p>
