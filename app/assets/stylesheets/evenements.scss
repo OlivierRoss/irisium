@@ -1,7 +1,11 @@
 @import 'variables';
 
-#liste-evenements {
-    padding: $padding-section;
+#image-entete-evenement {
+    height: 300px;
+    overflow: hidden;
+
+    img {
+    }
 }
 
 #entete-evenements {

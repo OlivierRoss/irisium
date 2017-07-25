@@ -1,5 +1,10 @@
 @import 'variables';
 
+#details-inscription {
+    font-family: montserrat-reg;
+    padding: 20px;
+}
+
 #abonnements-disponibles {
     padding: $padding-section;
     margin: 20px;
@@ -30,15 +35,19 @@
 .contenu-forfait {
     padding: 10% 20px;
     padding-bottom: 5%;
+
+    h2 {
+        text-transform: uppercase;
+    }
 }
 
 .forfait-grand {
-    height: 500px;
+    height: 400px;
 }
 
 .forfait-petit {
     margin-top: 50px;
-    height: 400px;
+    height: 300px;
     background-color: $gris;
 }
 
@@ -50,7 +59,7 @@
 }
 
 .forfait-prix {
-    font-size: 1.3em;
+    font-size: 2.5em;
     font-family: montserrat-bold;
     padding-top: 20px;
     padding-bottom: 5px;
@@ -69,12 +78,36 @@
 
 .banniere {
     background-color: $accent;
-    height: 30px;
+    height: 50px;
     transform: translate(-100px) rotate(-45deg) scale(0.8) translate(0px);
 }
 
 .banniere-inversee {
     background-color: $accent;
-    height: 30px;
+    height: 50px;
     transform: translate(100px) rotate(45deg) scale(0.8) translate(0px);
+}
+
+#details-abonnement-regulier {
+    position: relative;
+    border: 2px solid black;
+    margin: 45px auto;
+    width: 75%;
+
+    #gain-abonnement-regulier {
+        position: absolute;
+        top: -10px;
+        width: 100%;
+        text-align: center;
+        span {
+            font-family: montserrat-bold;
+            background-color: white;
+            padding: 0 10px;
+        }
+    }
+    p {
+        padding: 10px;
+        font-size: 0.7em;
+        font-family: montserrat-light;
+    }
 }
