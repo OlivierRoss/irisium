@@ -239,9 +239,12 @@
 }
 
 #image-evenement {
+    height: 300px;
+    overflow: hidden;
+
     img {
         width: 100%;
-        height: $hauteur-image-entete;
+        margin-top: -25%;
     }
 }
 

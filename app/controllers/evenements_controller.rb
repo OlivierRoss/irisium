@@ -29,13 +29,9 @@ class EvenementsController < ApplicationController
     def create
 
         # Sauvegarde de l'image dans la bd
-        image_web = evenement_params[:image]
-        image = Image.new({:data => image_web.tempfile.read, :mime_type => image_web.content_type, :name => image_web.original_filename})
-        image.save
-
         @evenement = Evenement.new(evenement_params.except(:image))
-        @evenement.image_id = image.id
-
+        @evenement.image_id = creer_image(evenement_params[:image])
+        
         respond_to do |format|
             if @evenement.save
                 format.html { redirect_to @evenement, notice: 'Evenement was successfully created.' }
@@ -51,7 +47,21 @@ class EvenementsController < ApplicationController
     # PATCH/PUT /evenements/1.json
     def update
         respond_to do |format|
-            if @evenement.update(evenement_params)
+
+            nouveau_parametres = evenement_params
+
+            # Si upload d'une nouvelle image
+            if (evenement_params[:image])
+                
+                # Supprimer l'ancienne
+                Image.find(@evenement.image_id).delete
+
+                # Creer nouvelle et mettre dans les parametres de l'update
+                nouveau_parametres = evenement_params.except(:image).merge(:image_id => creer_image(evenement_params[:image]))
+
+            end
+
+            if @evenement.update(nouveau_parametres)
                 format.html { redirect_to @evenement, notice: 'Evenement was successfully updated.' }
                 format.json { render :show, status: :ok, location: @evenement }
             else
@@ -85,4 +95,11 @@ class EvenementsController < ApplicationController
     def evenement_params
         params.require(:evenement).permit(:nom, :description, :image, :date, :lieu, :categorie)
     end
+
+    def creer_image (params_image)
+        image = Image.new({:data => params_image.tempfile.read, :mime_type => params_image.content_type, :name => params_image.original_filename})
+        image.save
+        image.id
+    end
+
 end
