@@ -22,4 +22,9 @@ class AccueilController < ApplicationController
         redirect_to root_path
     end
 
+    def deconnexion
+        sign_out(current_user)
+        redirect_to root_path
+    end
+
 end

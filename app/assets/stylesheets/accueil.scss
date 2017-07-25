@@ -12,6 +12,10 @@
     background-image: asset-url('backdrop');
 }
 
+a {
+    color: $accent;
+}
+
 #description-irisium {
     text-align: center;
     padding: $padding-section;
@@ -28,9 +32,6 @@
     }
 
     .lien {
-        a {
-            color: $accent;
-        }
         font-size: 0.95em;
         font-family: 'montserrat-semi-bold';
         text-transform: uppercase;

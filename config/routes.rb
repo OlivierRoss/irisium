@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'faq', to: "accueil#faq"
   get 'a_propos', to: "accueil#a_propos"
 
+  get 'deconnexion', to: "accueil#deconnexion"
+
   devise_for :users
   root 'accueil#index'
 

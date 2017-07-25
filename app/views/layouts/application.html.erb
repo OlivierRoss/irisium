@@ -30,6 +30,11 @@
         <header id="page-header">
             <p><a href="<%= root_path %>" class="nom-header" style="text-transform: uppercase; float: left;">Irisium</a></p>
             <ul class="liste-horizontale">
+
+                <% if user_signed_in? %>
+                    <li class="liste-horizontale-item" style="color: white;"><a href="<%= deconnexion_path %>">Déconnexion</a></li> 
+                <% end %>
+
                 <li class="liste-horizontale-item"><a href="#"><%= fa_icon "instagram", class: "fa-lg" %></a></li> 
                 <li class="liste-horizontale-item"><a href="#"><%= fa_icon "twitter", class: "fa-lg" %></a></li> 
                 <li class="liste-horizontale-item"><a href="https://www.facebook.com/studioirisium/"><%= fa_icon "facebook", class: "fa-lg" %></a></li> 
