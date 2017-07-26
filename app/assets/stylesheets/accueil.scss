@@ -10,6 +10,7 @@
     }
     height: $hauteur-image-entete;
     background-image: asset-url('backdrop');
+    background-size: cover;
 }
 
 a {
