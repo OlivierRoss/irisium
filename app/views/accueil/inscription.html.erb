@@ -1,0 +1,67 @@
+<section id="main">
+    <section id="details-inscription">
+    <h1 class="titre-page">Abonnements</h1>
+    <p class="texte">
+    Un abonnement chez Irisium vous permet de profiter des installations, du café-bar, d'un poste informatique ayant tous les logiciels nécessaires pour faire de la création, ainsi que tous les équipements disponibles sur place.
+    </p>
+    <h2 class="sous-titre-page">Les avantages</h2>
+    <div class="pure-g avantages">
+        <div class="pure-u-1 pure-u-lg-1-2">
+            <ul>
+                <li>Accès privé au local et aux services.</li>
+                <li>Avantages relatifs au statut de membre.</li>
+                <li>Rabais chez nos partenaires.<br><span style="padding-left: 20px;"><span class="partenaire">LA FABRIQUE</span><span class="partenaire">PIXM</span></span></li>
+            </ul>
+        </div>
+        <div class="pure-u-1 pure-u-lg-1-2">
+            <ul>
+                <li>Possibilité de créer des événements dans l'espace.<br><span style="padding-left: 20px;"><span class="partenaire">Ateliers</span><span class="partenaire">Vernissage</span></span></li>
+            </ul>
+        </div>
+    </div>
+    </section>
+    <section id="abonnements-disponibles" class="pure-g">
+        <div id="abonnement-occasionnel" class="pure-u-1 pure-u-md-1-3 forfait forfait-petit">
+            <div class="container-banniere">
+                <div id="banniere-occasionnel" class="banniere"><%= image_tag("etoile.png", id: "occasionnel-etoile-1") %></div>
+            </div>
+            <div class="contenu-forfait">
+                <h2>Artiste<br>Occasionnel</h2>
+                <div class="forfait-spacer"> </div>
+                <div class="forfait-prix">5$ <span class="forfait-prix-unite">/ sem</span></div>
+                <div class="forfait-note">* abonnement de un an</div>
+            </div>
+        </div>
+        <div id="abonnement-regulier" class="pure-u-1 pure-u-md-1-3 forfait forfait-grand">
+            <div class="container-banniere">
+                <div id="banniere-regulier" class="banniere"><%= image_tag("etoile.png", id: "regulier-etoile-1") %><%= image_tag("etoile.png", id: "regulier-etoile-2") %></div>
+            </div>
+            <div class="contenu-forfait">
+                <h2>Artiste<br>Régulier</h2>
+                <div class="forfait-spacer"> </div>
+                <div class="forfait-prix">10$ <span class="forfait-prix-unite">/ sem</span></div>
+                <div class="forfait-note">* abonnement de un an</div>
+                <div id="details-abonnement-regulier">
+                    <div id="gain-abonnement-regulier"><span>10$</span></div> 
+                    <p>de consommations gratuites à chaque semaine</p>
+                </div>
+            </div>
+        </div>
+        <div id="abonnement-entreprise" class="pure-u-1 pure-u-md-1-3 forfait forfait-petit">
+            <div class="container-banniere">
+                <div id="banniere-entreprise" class="banniere"><%= image_tag("etoile.png", id: "entreprise-etoile-1") %></div>
+            </div>
+            <div class="contenu-forfait">
+                <h2>Entreprise</h2>
+                <div class="forfait-spacer"> </div>
+                <div class="forfait-prix">20$ <span class="forfait-prix-unite">/ sem</span></div>
+                <div class="forfait-note"><span class="forfait-prix">5$</span><span class="forfait-prix-unite"> / sem par carte d'accès</span></div>
+            </div>
+        </div>
+
+        <% if false %>
+            <%= render 'form', user: @user %>
+            <%= link_to 'Back', users_path %>
+        <% end %>
+    </section>
+</section>

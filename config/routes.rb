@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   
   get 'faq', to: "accueil#faq"
   get 'a_propos', to: "accueil#a_propos"
+  
+  get 'inscription', to: "accueil#inscription"
 
   get 'deconnexion', to: "accueil#deconnexion"
 

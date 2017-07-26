@@ -17,6 +17,10 @@ class AccueilController < ApplicationController
 
     end
 
+    def inscription
+
+    end
+
     def demande_contact
         ContactMailer.contact_email(params).deliver_now
         redirect_to root_path
