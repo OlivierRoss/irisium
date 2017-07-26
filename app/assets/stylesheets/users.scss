@@ -50,30 +50,58 @@
     margin: 20px;
 }
 
+.container-banniere {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 33%;
+}
+
 #abonnement-occasionnel {
     overflow: hidden;
+    position: relative;
 
-    #occasionnel-etoile-1 {
-       transform: translate(-60px, 15px) rotate(40deg) scale(1.5);
+    #banniere-occasionnel {
+        transform: translate(-33%, 33%) rotate(-45deg);
     }
+    
+    #occasionnel-etoile-1 {
+       transform: translate(-10%, 50%) rotate(40deg);
+    }
+
 }
 
 #abonnement-regulier {
     overflow: hidden;
+    position: relative;
+
+    #banniere-regulier {
+        transform: translate(-33%, 33%) rotate(-45deg);
+    }
 
     #regulier-etoile-1 {
-       transform: translate(-25px, 15px) rotate(40deg) scale(1.5);
+       transform: translate(-10%, 50%) rotate(40deg);
     }
     #regulier-etoile-2 {
-       transform: translate(-95px, 15px) rotate(40deg) scale(1.5);
+       transform: translate(10%, 50%) rotate(40deg);
     }
 }
 
 #abonnement-entreprise {
     overflow: hidden;
+    position: relative;
 
+    .container-banniere {
+        left: initial;
+        right: 0px;
+    }
+
+    #banniere-entreprise {
+        transform: translate(0%, 33%) rotate(45deg);
+    }
+    
     #entreprise-etoile-1 {
-       transform: translate(60px, 15px) rotate(-40deg) scale(1.5);
+       transform: translate(10%, 50%) rotate(40deg);
     }
 }
 
@@ -132,15 +160,9 @@
 }
 
 .banniere {
+    height: 40px;
+    width: 150%;
     background-color: $accent;
-    height: 50px;
-    transform: translate(-100px) rotate(-45deg) scale(0.8) translate(0px);
-}
-
-.banniere-inversee {
-    background-color: $accent;
-    height: 50px;
-    transform: translate(100px) rotate(45deg) scale(0.8) translate(0px);
 }
 
 #details-abonnement-regulier {
