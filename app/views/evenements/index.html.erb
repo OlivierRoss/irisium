@@ -58,18 +58,16 @@ $(document).ready(function () {
     document.getElementById("champ-recherche").addEventListener("keyup", filtrer_evenements);
 
     // Filtres - categorie
-    $(".filtre-categorie").each(function(index, element) {
+    $(".filtre-categorie img").each(function(index, element) {
         element.addEventListener("click", function (event) {
-            if(event.target.hasAttribute("data-actif")) {
-                event.target.removeAttribute("data-actif"); 
+            if($(event.target).hasClass("filtre-actif")) {
                 $(event.target).removeClass("filtre-actif");
-                var index = filtre.categories.indexOf(event.target.getAttribute("data-id-categorie"));
+                var index = filtre.categories.indexOf(parseInt(event.target.parentElement.getAttribute("data-id-categorie")));
                 filtre.categories.splice(index, 1);
             }
             else {
-                event.target.setAttribute("data-actif", "actif"); 
                 $(event.target).addClass("filtre-actif");
-                filtre.categories.push(event.target.getAttribute("data-id-categorie"));
+                filtre.categories.push(parseInt(event.target.parentElement.getAttribute("data-id-categorie")));
             }
             filtrer_evenements();
         });
@@ -78,15 +76,13 @@ $(document).ready(function () {
     // Filtres - mois
     $(".filtre-mois").each(function(index, element) {
         element.addEventListener("click", function (event) {
-            if(event.target.hasAttribute("data-actif")) {
-                event.target.removeAttribute("data-actif"); 
+            if($(event.target).hasClass("filtre-actif")) {
                 $(event.target).removeClass("filtre-actif");
 
                 var index = filtre.mois.indexOf(parseInt(event.target.getAttribute("data-id-mois")) - 1);
                 filtre.mois.splice(index, 1);
             }
             else {
-                event.target.setAttribute("data-actif", "actif"); 
                 $(event.target).addClass("filtre-actif");
 
                 var mois = event.target.getAttribute("data-id-mois"); 

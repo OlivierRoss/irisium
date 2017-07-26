@@ -17,12 +17,29 @@
     .avantages {
 
         ul {
+            padding: 0px;
             list-style-type: none;
         }
 
         li {
             line-height: 25px;
             font-family: montserrat-light;
+            padding-left: 5px;
+
+            .partenaire {
+                padding: 3px 10px;
+                margin: 5px;
+                border: 1px solid $gris-fonce;
+            }
+        }
+
+        li::before {
+            line-height: 25px;
+            content: "x";
+
+            vertical-align: top;
+
+            padding-right: 10px;
         }
     }
 
