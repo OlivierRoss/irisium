@@ -56,14 +56,54 @@ body {
     font-family: montserrat-reg;
 }
 
+#container-menu {
+    padding: 5px 5%;
+}
+
+#menu-responsive {
+    float: right;
+    display: none;
+}
+
+@media (max-width: 850px) {
+
+    header ul {
+        display: none;
+    }
+    
+    #menu-responsive {
+        display: block;
+    }
+
+    #menu-responsive:active ~ ul, #menu-responsive:hover ~ ul, ul:hover {
+        margin: 0px;
+        padding: 0px;
+
+        background-color: black;
+        width: 120%;
+        margin-left: -10%;
+        display: block;
+
+        .liste-horizontale-item {
+            text-align: center;
+            display: block;
+            float: unset;
+            clear: both;
+
+            padding: 5px 10px !important;
+
+            background-color: transparent !important;
+        }
+    }
+}
+
 #page-header {
     font-family: montserrat-medium;
     letter-spacing: 2px;
-    width: calc(100% - 80px);
+    width: 100%;
     position: fixed;
     background-color: black;
     height: 50px;
-    padding: 5px 40px;
     z-index: 1;
 }
 

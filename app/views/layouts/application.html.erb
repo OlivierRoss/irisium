@@ -15,9 +15,9 @@
         <![endif]-->
         <!--[if gt IE 8]><!-->
             <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
-        <!--<![endif]-->
+            <!--<![endif]-->
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <body>
@@ -28,23 +28,31 @@
             <p class="alert"><%= alert %></p>
         <% end %>
         <header id="page-header">
-            <p><a href="<%= root_path %>" class="nom-header" style="text-transform: uppercase; float: left;">Irisium</a></p>
-            <ul class="liste-horizontale">
 
-                <% if user_signed_in? %>
-                    <li class="liste-horizontale-item" style="color: white;"><a href="<%= deconnexion_path %>">Déconnexion</a></li> 
-                <% end %>
+            <div id="container-menu">
+                <p id="menu-responsive">
+                <%= fa_icon "bars", class: "fa-lg", style: "color: white;" %>
+                </p>
 
-                <li class="liste-horizontale-item"><a href="#"><%= fa_icon "instagram", class: "fa-lg" %></a></li> 
-                <li class="liste-horizontale-item"><a href="#"><%= fa_icon "twitter", class: "fa-lg" %></a></li> 
-                <li class="liste-horizontale-item"><a href="https://www.facebook.com/studioirisium/"><%= fa_icon "facebook", class: "fa-lg" %></a></li> 
+                <p><a href="<%= root_path %>" class="nom-header" style="text-transform: uppercase; float: left;">Irisium</a></p>
+                <ul class="liste-horizontale">
 
-                <li id="inscription-header" class="liste-horizontale-item pure-button pure-button-primary bg-couleur-accent"><a href="<%= new_user_path %>">Inscrivez-vous</a></li> 
-                <li class="liste-horizontale-item"><a href="<%= contact_path %>">Contact</a></li> 
-                <!-- <li class="liste-horizontale-item"><a href="<%= faq_path %>">FAQ</a></li> -->
-                <li class="liste-horizontale-item"><a href="<%= evenements_path %>">Évenements</a></li> 
-                <!-- <li class="liste-horizontale-item"><a href="<%= a_propos_path %>">À propos</a></li> -->
-            </ul>
+                    <% if user_signed_in? %>
+                        <li class="liste-horizontale-item" style="color: white;"><a href="<%= deconnexion_path %>">Déconnexion</a></li> 
+                    <% end %>
+
+                    <li class="liste-horizontale-item"><a href="#"><%= fa_icon "instagram", class: "fa-lg" %></a></li> 
+                    <li class="liste-horizontale-item"><a href="#"><%= fa_icon "twitter", class: "fa-lg" %></a></li> 
+                    <li class="liste-horizontale-item"><a href="https://www.facebook.com/studioirisium/"><%= fa_icon "facebook", class: "fa-lg" %></a></li> 
+
+                    <li id="inscription-header" class="liste-horizontale-item pure-button pure-button-primary bg-couleur-accent"><a href="<%= new_user_path %>">Inscrivez-vous</a></li> 
+                    <li class="liste-horizontale-item"><a href="<%= contact_path %>">Contact</a></li> 
+                    <!-- <li class="liste-horizontale-item"><a href="<%= faq_path %>">FAQ</a></li> -->
+                    <li class="liste-horizontale-item"><a href="<%= evenements_path %>">Évenements</a></li> 
+                    <!-- <li class="liste-horizontale-item"><a href="<%= a_propos_path %>">À propos</a></li> -->
+                </ul>
+            </div>
+
         </header>
 
         <section id="contenu-principal">
