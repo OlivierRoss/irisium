@@ -1,9 +1,9 @@
 module EvenementsHelper
     def image_categorie (id, inverser = false)
         if inverser
-            image_tag(asset_url(Evenement::categories.key(id) + "_inv"))
+            image_tag(Evenement::categories.key(id) + "_inv.svg")
         else
-            image_tag(asset_url(Evenement::categories.key(id)))
+            image_tag(Evenement::categories.key(id) + ".svg")
         end
     end
 end
