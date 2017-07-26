@@ -28,7 +28,7 @@
         </div>
 
         <div id="evenements-prochain-mois" class="pure-u-1">
-            <h2><%= l(@evenements.first.date, format: :ma) %> <span class="nb-evenements">(<%= @evenements.count %> événements)</span></h2>
+            <h2><%= l(@evenements.first.date, format: :ma) %> <span class="nb-evenements">(<%= @evenements.count %> événement <%= "s" if @evenements.count > 1 %>)</span></h2>
         </div>
 
         <div id="evenements-items" class="pure-g">
