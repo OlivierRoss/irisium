@@ -3,15 +3,19 @@
 
 #creativite {
     text-align: center;
+    position: relative;
 
     h2 {
+        position: absolute;
+        top: 45%;
+        left: 5%;
+        right: 5%;
         text-transform: uppercase;
         vertical-align: middle;
-        line-height: $hauteur-image-entete;
         font-size: 2.1em;
     }
 
-    height: $hauteur-image-entete;
+    height: 100vh;
     background-image: asset-url('backdrop');
     background-size: cover;
 }
@@ -100,7 +104,7 @@ a {
         text-shadow: 1px 1px $noir;
         padding-top: 190px;
         text-align: center;
-        font-size: 3.5em;
+        font-size: 2.5em;
     }
 
     p {
