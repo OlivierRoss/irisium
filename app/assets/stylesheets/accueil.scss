@@ -3,11 +3,14 @@
 
 #creativite {
     text-align: center;
-    h3 {
+
+    h2 {
         text-transform: uppercase;
         vertical-align: middle;
         line-height: $hauteur-image-entete;
+        font-size: 2.1em;
     }
+
     height: $hauteur-image-entete;
     background-image: asset-url('backdrop');
     background-size: cover;
@@ -20,6 +23,8 @@ a {
 #description-irisium {
     text-align: center;
     padding: $padding-section;
+    margin: 30px 0;
+
     h3 {
         font-family: montserrat-reg;
         text-transform: uppercase;
@@ -92,7 +97,7 @@ a {
 
     h2 {
         color: white;
-        text-shadow: 1px 1px black;
+        text-shadow: 1px 1px $noir;
         padding-top: 190px;
         text-align: center;
         font-size: 3.5em;
@@ -105,7 +110,7 @@ a {
 
         a {
             color: white;
-            text-shadow: 1px 1px black;
+            text-shadow: 1px 1px $noir;
             background-color: transparent;
 
         }
@@ -115,6 +120,17 @@ a {
 /***************************/
 
 #formulaire-contact {
+
+    h1 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    label{
+        font-family: montserrat-reg;
+        letter-spacing: 2px;
+    }
+
     padding: 15px 5%;
     margin: 20px auto;
     background-color: $gris;
@@ -126,6 +142,7 @@ a {
 
         border-radius: 15px;
         width: 100px;
+        background-color: $accent;
     }
 }
 
