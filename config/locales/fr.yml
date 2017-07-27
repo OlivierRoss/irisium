@@ -5,7 +5,7 @@ fr:
             mois: '%B'
             jour_semaine: '%A'
             heure: '%H'
-            minutes: '%m'
+            minutes: '%M'
     date:
         formats:
             mois: '%B'
