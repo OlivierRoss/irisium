@@ -1,5 +1,9 @@
 <section id="image-entete-evenement" class="pure-u-1">
     <%= image_tag(image_show_path @evenements.first.image_id) %>
+    <div id="evenement-entete-informations">
+        <h3><%= @evenements.first.nom %></h3>
+        <p><%= l(@evenements.first.date, format: :jour_semaine) %> <%= @evenements.first.date.day %> <%= l(@evenements.first.date, format: :mois) %> </p>
+    </div>
 </section>
 
 <section id="main">

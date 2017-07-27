@@ -3,6 +3,7 @@
 #image-entete-evenement {
     height: 500px;
     overflow: hidden;
+    position: relative;
 
     img {
         margin-top: -5%;
@@ -31,6 +32,24 @@
         font-family: montserrat-reg;
         text-transform: uppercase;
         letter-spacing: 2px;
+    }
+}
+
+#evenement-entete-informations {
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    right: 50px;
+
+    h3 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: montserrat-reg;
+        font-size: 1.3em;
+    }
+
+    p {
+        font-family: montserrat-light;
     }
 }
 
