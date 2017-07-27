@@ -131,8 +131,7 @@ function filtrer (evenement) {
 
     // mois
     if(filtre.mois.length != 0) {
-        var mois = new Date(evenement.getAttribute("data-date"));
-        mois = mois.getMonth();
+        var mois = parseInt(evenement.getAttribute("data-date").substring(5,7)) - 1;
         if(filtre.mois.indexOf(mois) == -1) return false;
     }
     return true;
