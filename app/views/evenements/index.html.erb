@@ -1,10 +1,12 @@
-<section id="image-entete-evenement" class="pure-u-1">
-    <%= image_tag(image_show_path @evenements.first.image_id) %>
-    <div id="evenement-entete-informations">
-        <h3><%= @evenements.first.nom %></h3>
-        <p><%= l(@evenements.first.date, format: :jour_semaine) %> <%= @evenements.first.date.day %> <%= l(@evenements.first.date, format: :mois) %> </p>
-    </div>
-</section>
+<% if !@evenements.empty? %>
+    <section id="image-entete-evenement" class="pure-u-1">
+        <%= image_tag(image_show_path @evenements.first.image_id) %>
+        <div id="evenement-entete-informations">
+            <h3><%= @evenements.first.nom %></h3>
+            <p><%= l(@evenements.first.date, format: :jour_semaine) %> <%= @evenements.first.date.day %> <%= l(@evenements.first.date, format: :mois) %> </p>
+        </div>
+    </section>
+<% end %>
 
 <section id="main">
     <section id="liste-evenements" class="pure-g">
@@ -32,7 +34,11 @@
         </div>
 
         <div id="evenements-prochain-mois" class="pure-u-1">
-            <h2><%= l(@evenements.first.date, format: :ma) %> <span class="nb-evenements">(<%= @evenements.count %> événement <%= "s" if @evenements.count > 1 %>)</span></h2>
+            <% if !@evenements.empty? %>
+                <h2><%= l(@evenements.first.date, format: :ma) %> <span class="nb-evenements">(<%= @evenements.count %> événement <%= "s" if @evenements.count > 1 %>)</span></h2>
+            <% else %>
+                <h2><%= l(Date.today(), format: :ma) %> <span class="nb-evenements">(<%= @evenements.count %> événement <%= "s" if @evenements.count > 1 %>)</span></h2>
+            <% end %>
         </div>
 
         <div id="evenements-items" class="pure-g">

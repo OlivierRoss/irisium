@@ -9,3 +9,4 @@ fr:
     date:
         formats:
             mois: '%B'
+            ma: '%B %Y'
