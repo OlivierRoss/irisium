@@ -75,7 +75,7 @@ body {
         display: block;
     }
 
-    #menu-responsive:active ~ ul, #menu-responsive:hover ~ ul, ul:hover {
+    #menu-responsive:hover ~ ul, ul:hover, #menu-responsive.hover ~ ul, ul.hover {
         margin: 0px;
         padding: 0px;
 
